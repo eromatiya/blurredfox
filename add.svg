@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="ic_add_48px.svg"
-   id="svg4"
-   version="1.1"
-   viewBox="0 0 48 48"
+   width="48"
    height="48"
-   width="48">
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="add.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -22,35 +22,36 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs8" />
   <sodipodi:namedview
-     inkscape:current-layer="svg4"
-     inkscape:window-maximized="0"
-     inkscape:window-y="28"
-     inkscape:window-x="45"
-     inkscape:cy="24"
-     inkscape:cx="24"
-     inkscape:zoom="12"
-     inkscape:pagecheckerboard="true"
-     showgrid="false"
-     id="namedview6"
-     inkscape:window-height="740"
-     inkscape:window-width="1321"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
      bordercolor="#666666"
-     pagecolor="#ffffff" />
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1321"
+     inkscape:window-height="740"
+     id="namedview6"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="12"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-x="45"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
   <path
-     style="fill:#ffffff;fill-opacity:1;stroke-width:1.71429"
+     d="M 40,26.285714 H 26.285714 V 40 H 21.714286 V 26.285714 H 8 V 21.714286 H 21.714286 V 8 h 4.571428 V 21.714286 H 40 Z"
      id="path2"
-     d="M 48,27.428571 H 27.428571 V 48 H 20.571429 V 27.428571 H 0 V 20.571429 H 20.571429 V 0 h 6.857142 V 20.571429 H 48 Z" />
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.14286" />
 </svg>
