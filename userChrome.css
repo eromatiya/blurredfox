@@ -63,32 +63,6 @@ Transparent Window
 	border: none !important;
 }
 
-/* 
-░█▀▄░█░█░▀█▀░▀█▀░█▀█░█▀█
-░█▀▄░█░█░░█░░░█░░█░█░█░█
-░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀
- 
-Buttons
-*/
-
-button {
-	-moz-appearance: none !important;
-	background: var(--bf-bg) !important;
-	padding: 5px !important;
-	border-radius: 6px !important;
-}
-
-button:hover {
-	-moz-appearance: none !important;
-	background: var(--bf-hover-bg) !important;
-	padding: 5px !important;
-	border-radius: 6px !important;
-}
-
-button label {
-	color: var(--bf-color) !important;
-}
-
 /*
 ░▀█▀░█▀█░█▀█░█░░░█▀▄░█▀█░█▀▄
 ░░█░░█░█░█░█░█░░░█▀▄░█▀█░█▀▄
@@ -515,9 +489,6 @@ menupopup menu:hover:not([disabled=true]), menuitem:hover:not([disabled=true]) {
 	background-color: var(--bf-accent-bg) !important;
 }
 
-
-
- 
 /* 
 ░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█░█▀▄░█░█░▀█▀░▀█▀░█▀█░█▀█░█▀▀
 ░█▄█░░█░░█░█░█░█░█░█░█▄█░█▀▄░█░█░░█░░░█░░█░█░█░█░▀▀█
@@ -537,9 +508,26 @@ The control buttons. Contains, close, minimize, and maximize buttons
  
 The customization window
 */
+
 #customization-container {
 	background: var(--bf-bg) !important;
 }
 
- 
+.customizationmode-button {
+	-moz-appearance: none !important;
+	background: var(--bf-bg) !important;
+	padding: 5px !important;
+	border-radius: 6px !important;
+}
+
+.customizationmode-button:hover {
+	-moz-appearance: none !important;
+	background: var(--bf-hover-bg) !important;
+	padding: 5px !important;
+	border-radius: 6px !important;
+}
+
+.customizationmode-button label {
+	color: var(--bf-color) !important;
+}
  
