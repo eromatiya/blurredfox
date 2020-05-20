@@ -4,7 +4,7 @@
 	--bf-color: #f2f2f2;
 	--bf-focused-color: #fefefe;
 	
-	--bf-accent-bg: #4C5FF9;
+	--bf-accent-bg: #4C5FF9CC;
 
 	--bf-icon-color: #f2f2f2;
 	--bf-switch-tab-color: #6498EF;
@@ -181,6 +181,11 @@ toolbarbutton {
 	font-weight: var(--bf-urlbar-results-font-weight);
 	font-size: var(--bf-urlbar-results-font-size) !important;
 	color: var(--bf-urlbar-results-color) !important;
+}
+
+.urlbarView-row-inner:hover {
+  /* 	hover background color */
+	background: var(--bf-accent-bg) !important;
 }
 
 .urlbarView-url, .search-panel-one-offs-container {
@@ -460,38 +465,6 @@ box.panel-arrowcontent {
  
 Right-click menu
 */
-
-
-/* menupopup {
- 	-moz-appearance: none !important;
- 	background: var(--bf-menupopup-bg) !important;
- 	border: none !important;
- 	border-radius: 4px !important;
- 	padding: 4px 0 !important;
-}
-
-menupopup label {
- 	color: var(--bf-menupopup-color) !important;
-}
-
-menupopup menupopup {
- 	margin: -5px 0 0 -4px;
-}
-
-menubar > menu > menupopup {
- 	border-top-left-radius: 0 !important;
- 	border-top-right-radius: 0 !important;
-}
-
-menuitem[type="checkbox"] image, menuitem[type="radio"] image {
- 	visibility: visible !important;
-}
-
-menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
- 	background: transparent !important;
-}
- */
-
 
 menupopup, popup,
 popup > menu > menupopup,
