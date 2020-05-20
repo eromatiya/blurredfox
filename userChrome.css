@@ -1,32 +1,36 @@
 :root {
-	--bf-bg: #00000039;
-	--bf-bg-hover: #fefefe20;
+	--bf-bg: #00000066;
+	--bf-hover-bg: #fefefe20;
 	--bf-color: #f2f2f2;
 	--bf-focused-color: #fefefe;
+	
+	--bf-accent-bg: #4C5FF9CC;
 
 	--bf-icon-color: #f2f2f2;
-	--bf-switch-tab-color: orange;
-	--bf-bookmark-color: green;
+	--bf-switch-tab-color: #6498EF;
+	--bf-bookmark-color: #53E2AE;
 
 	--bf-tab-font-size: 11pt;
 	--bf-tab-font-weight: 500;
 	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: #00000060;
+	--bf-tab-selected-bg: var(--bf-bg);
 
 	--bf-tab-height: 32px;
 	--bf-tab-border-radius: 6px;
 
-	--bf-tab-soundplaying-bg: var(--bf-bg-hover);
+	--bf-tab-soundplaying-bg: var(--bf-hover-bg);
 
 	--bf-navbar-padding: 4px;
-
+  
+	--bf-urlbar-bg: var(--bf-bg);
+	--bf-urlbar-active-bg: #000000BB;
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
 	--bf-urlbar-font-size: 12pt;
 	--bf-urlbar-font-weight: 500;
 
 	--bf-urlbar-results-font-size: 12pt;
-	--bf-urlbar-results-font-weight: 350;
+	--bf-urlbar-results-font-weight: 550;
 	--bf-urlbar-results-url-color: var(--bf-color);
 
 	--bf-sidebar-bg: transparent;
@@ -34,6 +38,8 @@
 
 	--bf-menupopup-bg: #00000090;
 	--bf-menupopup-color: var(--bf-color);
+	
+	--bf-splitter-bg: #00000090;
 
 	--autocomplete-popup-background: var(--bf-bg) !important;
 	--default-arrowpanel-background: var(--bf-bg) !important;
@@ -44,8 +50,6 @@
 	--urlbar-separator-color: transparent !important;
 }
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
 /*
 ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█
 ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░
@@ -55,7 +59,7 @@ Transparent Window
 */
 
 #main-window {
-	background: var(--bf-bg) !important;
+	background: transparent !important;
 	border: none !important;
 }
 
@@ -85,6 +89,11 @@ toolbarbutton {
 	margin-left: 2px !important;
 }
 
+.toolbarbutton-1 {
+	--toolbarbutton-hover-background: var(--bf-hover-bg) !important;
+	--toolbarbutton-active-background: var(--bf-hover-bg) !important;
+}
+
 #urlbar {
 	max-width: 70% !important;
 	margin: 0 15% !important;
@@ -95,13 +104,17 @@ toolbarbutton {
 }
 
 #urlbar-background {
-	background-color: var(--bf-bg) !important;
+	background-color: var(--bf-urlbar-bg) !important;
 	border: none !important;
 }
 
 .megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
 	background-color: transparent !important;
+}
+
+.megabar[open=true] > #urlbar-background {
+	background: var(--bf-urlbar-active-bg) !important;
 }
 
 #navigator-toolbox, toolbaritem {
@@ -121,7 +134,8 @@ toolbarbutton {
 	display: none !important;
 }
 
-image #star-button {
+#star-button {
+  /* 	Hide URL bar bookmark button */
 	display: none;
 }
 
@@ -143,6 +157,11 @@ image #star-button {
 	color: var(--bf-urlbar-results-color) !important;
 }
 
+.urlbarView-row-inner:hover {
+  /* 	hover background color */
+	background: var(--bf-accent-bg) !important;
+}
+
 .urlbarView-url, .search-panel-one-offs-container {
 	color: var(--bf-urlbar-results-url-color) !important;
 	font-weight: var(--bf-urlbar-results-font-weight);
@@ -156,7 +175,22 @@ image #star-button {
 	text-align: center !important;
 }
 
-#tracking-protection-icon-container, #identity-
+::-moz-selection {
+	/* URL bar hightlight color */
+	background-color: var(--bf-accent-bg) !important;
+}
+
+#searchbar {
+	background: var(--bf-bg) !important;
+	border: none !important;
+}
+
+.searchbar-textbox {
+	color: var(--bf-focus-fg) !important;
+	font-weight: 700 !important;
+}
+
+#tracking-protection-icon-container, #identity-box
 {
 	display: none !important;
 }
@@ -241,7 +275,7 @@ The tabs container
 
 hbox.tab-content .tab-icon-image {
 	/* Hide tab icon */
-	display: initial !important;
+	display: none !important;
 }
 
 hbox.tab-content[pinned=true] .tab-icon-image {
@@ -253,7 +287,7 @@ hbox.tab-content[pinned=true] .tab-text {
 	display: none !important;
 }
 
-.tab-line {
+.tab-line, .tab-bottom-line {
   /* 	Hide the tab line */
 	display: none !important;
 }
@@ -279,7 +313,7 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 #tabs-newtab-button {
-	padding-bottom: 4px !important;
+	padding-bottom: 5px !important;
 }
 
 #tabs-newtab-button {
@@ -292,7 +326,7 @@ tab.tabbrowser-tab {
 }
 
 tab.tabbrowser-tab:hover {
-	background: var(--bf-bg-hover) !important;
+	background: var(--bf-hover-bg) !important;
  	box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 
@@ -366,13 +400,10 @@ image #sidebar-icon {
  	--sidebar-background-color: var(--bf-sidebar-bg) !important;
 }
 
-splitter #sidebar-splitter {
- 	opacity: 1 !important;
-}
-
-splitter #sidebar-splitter {
+#sidebar-splitter {
  	border: none !important;
-	background-color: var(--bf-bg) !important;
+	opacity: 1 !important;
+	background-color: var(--bf-splitter-bg) !important;
 }
 
 /* 
@@ -409,34 +440,53 @@ box.panel-arrowcontent {
 Right-click menu
 */
 
-
-menupopup {
- 	-moz-appearance: none !important;
- 	background: var(--bf-menupopup-bg) !important;
- 	border: none !important;
- 	border-radius: 4px !important;
- 	padding: 4px 0 !important;
+menupopup, popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup {
+	-moz-appearance: none !important;
+	background: var(--bf-menupopup-bg) !important;
+	border: 0px !important;
+	border-radius: 4px !important;
+	padding: 2px 0px 2px 0px  !important;
 }
 
-menupopup label {
- 	color: var(--bf-menupopup-color) !important;
+menupopup menuseparator {
+	-moz-appearance: none !important;
+	background: #525A6D  !important;
+	margin: 2px 0px 2px 0px !important;
+	padding: 0 !important;
+	border-top: none !important;
+	border-color: transparent !important;
 }
 
-menupopup menupopup {
- 	margin: -5px 0 0 -4px;
+menupopup menu, menuitem {
+	-moz-appearance: none !important;
+	color: var(--bf-focused-color) !important;
+	padding: 5px !important;
 }
 
-menubar > menu > menupopup {
- 	border-top-left-radius: 0 !important;
- 	border-top-right-radius: 0 !important;
+menupopup menu[disabled=true], menuitem[disabled=true] {
+  /* 	Disabled button */
+	-moz-appearance: none !important;
+	opacity: 0.5 !important;
+	color: var(--bf-focused-color) !important;
+	background-color: transparent !important;
 }
 
-menuitem[type="checkbox"] image, menuitem[type="radio"] image {
- 	visibility: visible !important;
+menupopup menu:hover:not([disabled=false]), menuitem:hover:not([disabled=false]) {
+  /* 	Disabled button hover */
+	-moz-appearance: none !important;
+	opacity: 0.5 !important;
+	color: var(--bf-focused-color) !important;
+	background-color: transparent !important;
 }
 
-menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
- 	background: transparent !important;
+menupopup menu:hover:not([disabled=true]), menuitem:hover:not([disabled=true]) {
+  /* 	Enabled button hover */
+	-moz-appearance: none !important;
+	color: var(--bf-focused-color) !important;
+	opacity: 1 !important;
+	background-color: var(--bf-accent-bg) !important;
 }
 
 /* 
@@ -450,3 +500,34 @@ The control buttons. Contains, close, minimize, and maximize buttons
 #autohide-context, #window-controls {
 	display:none!important;
 }
+
+/* 
+░█▀▀░█░█░█▀▀░▀█▀░█▀█░█▄█░▀█▀░▀▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█
+░█░░░█░█░▀▀█░░█░░█░█░█░█░░█░░▄▀░░█▀█░░█░░░█░░█░█░█░█░█▄█░░█░░█░█░█░█░█░█░█▄█
+░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀
+ 
+The customization window
+*/
+
+#customization-container {
+	background: var(--bf-bg) !important;
+}
+
+.customizationmode-button {
+	-moz-appearance: none !important;
+	background: var(--bf-bg) !important;
+	padding: 5px !important;
+	border-radius: 6px !important;
+}
+
+.customizationmode-button:hover {
+	-moz-appearance: none !important;
+	background: var(--bf-hover-bg) !important;
+	padding: 5px !important;
+	border-radius: 6px !important;
+}
+
+.customizationmode-button label {
+	color: var(--bf-color) !important;
+}
+ 
