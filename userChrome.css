@@ -17,12 +17,7 @@
 
 	--bf-tab-height: 32px;
 	--bf-tab-border-radius: 6px;
-
-<<<<<<< HEAD
 	--bf-tab-soundplaying-bg: #985EFFCC;
-=======
-	--bf-tab-soundplaying-bg: var(--bf-hover-bg);
->>>>>>> 3692f13a9afa6a41d76d4e319a50e4d863cb8cc8
 
 	--bf-navbar-padding: 4px;
   
