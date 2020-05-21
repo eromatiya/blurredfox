@@ -6,6 +6,9 @@
 | --- |
 | ![screenshot](screenshot.png) |
 
+| blurredfox w/ hidden tab bar and [Tabiverse starpage](https://addons.mozilla.org/en-US/firefox/addon/tabiverse/) |
+| --- |
+| ![screenshot](screenshot2.png) |
 
 ## How to
 
