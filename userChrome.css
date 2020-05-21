@@ -103,13 +103,31 @@ toolbarbutton {
 }
 
 #urlbar-background {
-	background-color: var(--bf-urlbar-bg) !important;
+	background: var(--bf-urlbar-bg) !important;
 	border: none !important;
+}
+
+.urlbar-icon:not([disabled]):hover,
+.urlbar-icon-wrapper:not([disabled]):hover {
+   background: var(--bf-hover-bg) !important;
+}
+
+.urlbar-icon[open],
+.urlbar-icon-wrapper[open],
+.urlbar-icon:not([disabled]):hover:active,
+.urlbar-icon-wrapper:hover:active {
+   background: var(--bf-hover-bg) !important;
+}
+
+.urlbar-icon-wrapper[open] > .urlbar-icon,
+.urlbar-icon-wrapper > .urlbar-icon:hover,
+.urlbar-icon-wrapper > .urlbar-icon:hover:active {
+   background: var(--bf-hover-bg) !important;
 }
 
 .megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
-	background-color: transparent !important;
+	background: transparent !important;
 }
 
 .megabar[open=true] > #urlbar-background {
@@ -135,7 +153,16 @@ toolbarbutton {
 
 #star-button {
   /* 	Hide URL bar bookmark button */
-	display: none;
+	display: none !important;
+}
+
+#star-button:hover:not(.no-hover):not([open=true]) {
+	background:#ff00ff !important;
+}
+
+#star-button:hover:active:not(.no-hover),
+#star-button[open=true] {
+	background: var(--bf-hover-bg) !important;
 }
 
 .toolbarbutton-text {
@@ -189,8 +216,7 @@ toolbarbutton {
 	font-weight: 700 !important;
 }
 
-#tracking-protection-icon-container, #identity-box
-{
+#tracking-protection-icon-container, #identity-box {
 	display: none !important;
 }
 
@@ -205,6 +231,18 @@ toolbarbutton {
 
 #forward-button {
 	list-style-image: url("right-arrow.svg") !important;
+}
+
+#identity-box:hover:not(.no-hover):not([open=true]),
+#tracking-protection-icon-container:hover:not(.no-hover):not([open=true]) {
+	background: var(--bf-hover-bg) !important;
+}
+
+#identity-box:hover:active:not(.no-hover),
+#identity-box[open=true],
+#tracking-protection-icon-container:hover:active:not(.no-hover),
+#tracking-protection-icon-container[open=true] {
+	background: var(--bf-hover-bg) !important;
 }
 
 
@@ -469,36 +507,6 @@ menupopup menuseparator {
 	padding: 0 !important;
 	border-top: none !important;
 	border-color: transparent !important;
-}
-
-menupopup menu, menuitem {
-	-moz-appearance: none !important;
-	color: var(--bf-focused-color) !important;
-	padding: 5px !important;
-}
-
-menupopup menu[disabled=true], menuitem[disabled=true] {
-  /* 	Disabled button */
-	-moz-appearance: none !important;
-	opacity: 0.5 !important;
-	color: var(--bf-focused-color) !important;
-	background-color: transparent !important;
-}
-
-menupopup menu:hover:not([disabled=false]), menuitem:hover:not([disabled=false]) {
-  /* 	Disabled button hover */
-	-moz-appearance: none !important;
-	opacity: 0.5 !important;
-	color: var(--bf-focused-color) !important;
-	background-color: transparent !important;
-}
-
-menupopup menu:hover:not([disabled=true]), menuitem:hover:not([disabled=true]) {
-  /* 	Enabled button hover */
-	-moz-appearance: none !important;
-	color: var(--bf-focused-color) !important;
-	opacity: 1 !important;
-	background-color: var(--bf-accent-bg) !important;
 }
 
 /* 
