@@ -221,6 +221,17 @@ The tabs container
 	-moz-box-ordinal-group: 3 !important;
 }
 
+#tabbrowser-tabs {
+  /* 	Set minimum height for tab bar */
+	--tab-min-height: 0px;
+}
+
+#tabbrowser-tabs tab:only-of-type,
+#tabbrowser-tabs tab:only-of-type + #tabs-newtab-button {
+  /* 	Hide tab bar if there's only one tab */
+	display: none !important;
+}
+
 .tabbrowser-tab[fadein]:not([pinned]) {
 	/* Stretch Tabs */
 	max-width: none !important;
@@ -502,6 +513,15 @@ The control buttons. Contains, close, minimize, and maximize buttons
 	display:none!important;
 }
 
+:root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
+    display: none !important;
+}
+
+:root[tabsintitlebar][sizemode="maximized"] #nav-bar {
+    padding-left: 3px !important;
+}
+
+
 /* 
 ░█▀▀░█░█░█▀▀░▀█▀░█▀█░█▄█░▀█▀░▀▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█
 ░█░░░█░█░▀▀█░░█░░█░█░█░█░░█░░▄▀░░█▀█░░█░░░█░░█░█░█░█░█▄█░░█░░█░█░█░█░█░█░█▄█
@@ -531,4 +551,3 @@ The customization window
 .customizationmode-button label {
 	color: var(--bf-color) !important;
 }
- 
