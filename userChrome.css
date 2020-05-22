@@ -79,10 +79,6 @@ toolbar#nav-bar {
 	padding: var(--bf-navbar-padding) !important;
 }
 
-.toolbar-items {
-	background-color: var(--bf-bg) !important;
-}
-
 toolbarbutton {
 	box-shadow: none !important;
 	margin-left: 2px !important;
@@ -147,17 +143,18 @@ toolbarbutton {
 	color: var(--bf-icon-color) !important;
 }
 
-.urlbarView-favicon, .urlbarView-type-icon {
+.urlbarView-favicon,
+.urlbarView-type-icon {
 	display: none !important;
 }
 
 #star-button {
-  /* 	Hide URL bar bookmark button */
-	display: none !important;
+  /* URL bar bookmark button */
+	display: initial !important;
 }
 
 #star-button:hover:not(.no-hover):not([open=true]) {
-	background:#ff00ff !important;
+	background: var(--bf-hover-bg) !important;
 }
 
 #star-button:hover:active:not(.no-hover),
@@ -216,10 +213,6 @@ toolbarbutton {
 	font-weight: 700 !important;
 }
 
-#tracking-protection-icon-container, #identity-box {
-	display: none !important;
-}
-
 #back-button > .toolbarbutton-icon {
 	--backbutton-background: transparent !important;
 	border: none !important;
@@ -231,6 +224,14 @@ toolbarbutton {
 
 #forward-button {
 	list-style-image: url("right-arrow.svg") !important;
+}
+
+#tracking-protection-icon-container {
+/* 	display: none !important; */
+}
+
+#identity-box {
+	display: none !important;
 }
 
 #identity-box:hover:not(.no-hover):not([open=true]),
@@ -259,9 +260,17 @@ The tabs container
 	-moz-box-ordinal-group: 3 !important;
 }
 
+.toolbar-items {	
+	background-color: var(--bf-bg) !important;
+}
+
 #tabbrowser-tabs {
   /* 	Set minimum height for tab bar */
 	--tab-min-height: 0px;
+	margin-top: 4px !important;
+	margin-bottom: 4px !important;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
 }
 
 #tabbrowser-tabs tab:only-of-type,
@@ -322,8 +331,8 @@ The tabs container
 }
 
 hbox.tab-content .tab-icon-image {
-	/* Hide tab icon */
-	display: none !important;
+	/* Tab icon */
+	display: initial !important;
 }
 
 hbox.tab-content[pinned=true] .tab-icon-image {
@@ -345,7 +354,7 @@ hbox.tab-content[pinned=true] .tab-text {
  	border-width: 0;
  	height: var(--bf-tab-height) !important;
  	margin-top: 0 !important;
-	margin-bottom: 4px !important;
+	margin-bottom: 0 !important;
 	margin-inline-start: 2px !important;
 	margin-inline-end: 2px !important;
 }
@@ -358,10 +367,6 @@ hbox.tab-content[pinned=true] .tab-text {
 .tab-icon-sound {
   /* 	Hide icon of audio */
  	display: none !important;
-}
-
-#tabs-newtab-button {
-	padding-bottom: 5px !important;
 }
 
 #tabs-newtab-button {
@@ -382,7 +387,6 @@ tab.tabbrowser-tab:hover {
 	--tab-loading-fill: var(--bf-color) !important;
 }
 
-
 /* 
 ░█▀▀░▀█▀░█▀█░█▀▄░█▀▄░█▀█░█▀▄
 ░█▀▀░░█░░█░█░█░█░█▀▄░█▀█░█▀▄
@@ -394,10 +398,19 @@ The findbar
 #browser #appcontent #tabbrowser-tabbox findbar,
 #browser #appcontent #tabbrowser-tabbox tabpanels {
  	-moz-appearance: none !important;
- 	background-color: transparent !important;
- 	background-image: none !important;
+ 	background: transparent !important;
+	border: none !important;
 }
 
+#browser #appcontent #tabbrowser-tabbox findbar {
+ 	background-color: var(--bf-bg) !important;
+}
+
+.findbar-find-previous,
+.findbar-find-next {
+	margin: 0px !important;
+	border: none !important;
+}
 #browser #appcontent #tabbrowser-tabbox .findbar-find-fast {
  	background-color: var(--bf-bg) !important;
 }
@@ -430,8 +443,8 @@ Contains history, bookmarks, and etc.
  	fill: var(--bf-icon-color) !important;
 }
 
-image #sidebar-icon {
-  display: none;
+#sidebar-icon {
+  display: none !important;
 }
 
 .sidebar-placesTree {
