@@ -315,14 +315,34 @@ The tabs container
 	color: var(--bf-tab-color);
 }
 
-.tab-label-container:not([textoverflow]) {
-	/* Center tab text */
-	width: 50% !important;
-	max-width: 50% !important;
-	min-width: 50% !important;
+/* Center all content */
+.tab-content {
 	display: flex;
-	overflow: hidden;
 	justify-content: center;
+	align-items: center;
+	margin-top: -1px;
+	min-width: 100% !important;
+	padding: 0 10px !important;
+}
+
+/* Prevent tab icons size breaking */
+.tab-icon-image, .tab-icon-sound,
+.tab-throbber, .tab-throbber-fallback,
+.tab-close-button {
+	min-width: 16px;
+}
+
+/* Adjust tab label width */
+.tab-label-container {
+	min-width: 03 !important;
+}
+
+/* If tab close button is not present, don't force favicon to the center */
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([busy]) .tab-icon-image,
+#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([image]) .tab-label-container {
+	margin-left: 0 !important;
 }
 
 .tab-close-button {
@@ -376,6 +396,12 @@ hbox.tab-content[pinned=true] .tab-text {
 
 tab.tabbrowser-tab {
  	overflow: hidden;
+}
+
+/* Remove hover effects on tab bar buttons */
+#TabsToolbar {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
 }
 
 tab.tabbrowser-tab:hover {
