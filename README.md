@@ -6,10 +6,6 @@
 | --- |
 | ![screenshot](screenshot.png) |
 
-| blurredfox w/ hidden tab bar and [Tabiverse starpage](https://addons.mozilla.org/en-US/firefox/addon/tabiverse/) |
-| --- |
-| ![screenshot](screenshot2.png) |
-
 ## How to
 
 ### Quick install for the linux lads
@@ -24,7 +20,9 @@
 
 #### NOTE:
 
-It is advisible to check the script first before running it.
++ It is advisible to check the script first before running it.
++ The script will fail if you have multiple profile directory! Make sure you only have one!
++ If you have a current chrome folder in your profile directory, the script will make a backup.
 
 ### Manual Installation
 
