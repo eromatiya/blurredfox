@@ -70,6 +70,10 @@ Transparent Window
 Contains navbar, urlbar, and etc.
 */
 
+.browser-toolbar {
+	background: var(--bf-bg) !important;
+}
+
 toolbar {
 	background-image: none !important;
 }
@@ -261,7 +265,7 @@ The tabs container
 }
 
 .toolbar-items {	
-	background-color: var(--bf-bg) !important;
+	background-color: transparent !important;
 }
 
 #tabbrowser-tabs {
@@ -392,6 +396,11 @@ hbox.tab-content[pinned=true] .tab-text {
 #tabs-newtab-button {
 	list-style-image: url("add.svg") !important;
 	opacity: 1;
+}
+
+.private-browsing-indicator { 
+	display: none;
+	background: var(--bf-bg);
 }
 
 tab.tabbrowser-tab {
