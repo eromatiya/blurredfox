@@ -21,6 +21,7 @@
 #### NOTE:
 
 + It is advisible to check the script first before running it.
++ You need `bash` to run it.
 + The script will fail if you have multiple profile directory! Make sure you only have one!
 + If you have a current chrome folder in your profile directory, the script will make a backup.
 
