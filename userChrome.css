@@ -543,6 +543,7 @@ popup > menu > menupopup,
 menupopup > menu > menupopup {
 	-moz-appearance: none !important;
 	background: var(--bf-menupopup-bg) !important;
+	color: #fff !important;
 	border: 0px !important;
 	border-radius: 4px !important;
 	padding: 2px 0px 2px 0px  !important;
