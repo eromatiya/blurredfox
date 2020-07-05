@@ -45,7 +45,7 @@ EOF
 }
 
 
-FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/"  -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.default-release')"
+FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/"  -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.default-(release|default)')"
 
 if [[ -n $FF_USER_DIRECTORY ]];
 then
