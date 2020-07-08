@@ -13,7 +13,7 @@
 1. Run
   
   ```bash
-  $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/master/install.sh)"
+  $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/master/install.sh)"
   ```
 
 2. After the confirmation message that the theme is successfully installed, open firefox. You'll notice that it is still not transparent. To fix this, **`Open Menu > Customize > Change the theme to Dark`**.
@@ -25,7 +25,7 @@
 + The script will fail if you have multiple profile directory! Make sure you only have one!
 + If you have a current chrome folder in your profile directory, the script will make a backup.
 
-### Manual Installation
+### Manual Installation for linux lads
 
 1. Open the Firefox Menu located on the top-right corner with a humburger menu(three horizontal lines).
 2. Select `Preferences`, then `Preferences` again.
