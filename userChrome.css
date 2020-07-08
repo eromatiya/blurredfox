@@ -56,10 +56,25 @@
 
 Transparent Window
 */
-
 #main-window {
+	font-kerning: normal;
 	background: transparent !important;
 	border: none !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
+}
+
+/*
+░█▀▀░█▀█░█▀█░▀█▀
+░█▀▀░█░█░█░█░░█░
+░▀░░░▀▀▀░▀░▀░░▀░
+*/
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: none;
+	font-kerning: normal;
 }
 
 /*
@@ -128,6 +143,7 @@ toolbarbutton {
 .megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
 	background: transparent !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .megabar[open=true] > #urlbar-background {
@@ -220,6 +236,7 @@ toolbarbutton {
 #back-button > .toolbarbutton-icon {
 	--backbutton-background: transparent !important;
 	border: none !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #back-button {
@@ -266,6 +283,7 @@ The tabs container
 
 .toolbar-items {	
 	background-color: transparent !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #tabbrowser-tabs {
@@ -291,6 +309,7 @@ The tabs container
 .tab-background {
 	border: none !important;
 	background: transparent !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .tab-background[selected="true"] {
@@ -374,10 +393,10 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 .tabbrowser-tab {
- 	border-radius: var(--bf-tab-border-radius) !important;
- 	border-width: 0;
- 	height: var(--bf-tab-height) !important;
- 	margin-top: 0 !important;
+	border-radius: var(--bf-tab-border-radius) !important;
+	border-width: 0;
+	height: var(--bf-tab-height) !important;
+	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 	margin-inline-start: 2px !important;
 	margin-inline-end: 2px !important;
@@ -390,7 +409,7 @@ hbox.tab-content[pinned=true] .tab-text {
 
 .tab-icon-sound {
   /* 	Hide icon of audio */
- 	display: none !important;
+	display: none !important;
 }
 
 #tabs-newtab-button {
@@ -404,18 +423,19 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 tab.tabbrowser-tab {
- 	overflow: hidden;
+	overflow: hidden;
 }
 
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 tab.tabbrowser-tab:hover {
 	background: var(--bf-hover-bg) !important;
- 	box-shadow: 0 1px 4px rgba(0,0,0,.05);
+	box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 
 #tabbrowser-tabs {
@@ -432,13 +452,14 @@ The findbar
 
 #browser #appcontent #tabbrowser-tabbox findbar,
 #browser #appcontent #tabbrowser-tabbox tabpanels {
- 	-moz-appearance: none !important;
- 	background: transparent !important;
+	-moz-appearance: none !important;
+	background: transparent !important;
 	border: none !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #browser #appcontent #tabbrowser-tabbox findbar {
- 	background-color: var(--bf-bg) !important;
+	background-color: var(--bf-bg) !important;
 }
 
 .findbar-find-previous,
@@ -447,7 +468,7 @@ The findbar
 	border: none !important;
 }
 #browser #appcontent #tabbrowser-tabbox .findbar-find-fast {
- 	background-color: var(--bf-bg) !important;
+	background-color: var(--bf-bg) !important;
 }
 
 /* 
@@ -461,21 +482,22 @@ Contains history, bookmarks, and etc.
 #history-panel,
 #sidebar-search-container,
 #bookmarksPanel {
- 	background: var(--bf-bg) !important;
+	background: var(--bf-bg) !important;
 }
 
 #search-box {
- 	-moz-appearance: none !important;
- 	background: var(--bf-bg) !important;
- 	border-radius: 6px !important;
+	-moz-appearance: none !important;
+	background: var(--bf-bg) !important;
+	border-radius: 6px !important;
 }
 
 #sidebar-search-container {
- 	background-color: var(--bf-sidebar-bg) !important;
+	background-color: var(--bf-sidebar-bg) !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 .close-icon, .urlbar-icon {
- 	fill: var(--bf-icon-color) !important;
+	fill: var(--bf-icon-color) !important;
 }
 
 #sidebar-icon {
@@ -483,7 +505,7 @@ Contains history, bookmarks, and etc.
 }
 
 .sidebar-placesTree {
- 	color: var(--bf-sidebar-color) !important;
+	color: var(--bf-sidebar-color) !important;
 }
 
 #sidebar-switcher-target {
@@ -491,15 +513,16 @@ Contains history, bookmarks, and etc.
 }
 
 #sidebar-header {
- 	background: var(--bf-bg) !important;
+	background: var(--bf-bg) !important;
 }
 
 #sidebar-box {
- 	--sidebar-background-color: var(--bf-sidebar-bg) !important;
+	--sidebar-background-color: var(--bf-sidebar-bg) !important;
+	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
 #sidebar-splitter {
- 	border: none !important;
+	border: none !important;
 	opacity: 1 !important;
 	background-color: var(--bf-splitter-bg) !important;
 }
@@ -513,21 +536,21 @@ The dropdown menus
 */
 
 .panel-arrowcontent {
- 	padding: 0px !important;
- 	margin: 0px !important;
+	padding: 0px !important;
+	margin: 0px !important;
 }
 
 toolbarseparator {
- 	display: none !important;
+	display: none !important;
 }
 
 box.panel-arrowbox {
- 	display: none;
+	display: none;
 }
 
 box.panel-arrowcontent {
- 	border-radius: 8px !important;
- 	border: none !important;
+	border-radius: 8px !important;
+	border: none !important;
 }
 
 /* 
@@ -571,11 +594,11 @@ The control buttons. Contains, close, minimize, and maximize buttons
 }
 
 :root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
-    display: none !important;
+	display: none !important;
 }
 
 :root[tabsintitlebar][sizemode="maximized"] #nav-bar {
-    padding-left: 3px !important;
+	padding-left: 3px !important;
 }
 
 
