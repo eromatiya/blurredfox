@@ -40,6 +40,10 @@
 
 ### If there's no blur effect
 
+### If you're using Windows or Mac and something's wrong
+
+1. **Sadly, I only have archlinux, so I cannot guarantee that it will work on Windows10 and macOS. A feedback is welcome if it works on your platform.**
+
 1. **The theme does not provide the blur effect!** Make sure you have a compositor with blur support running! KDE Plasma, macOS, and Windows 10 have this by default, but you need to enable it! If you're using linux, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
 
 ### If you're using Plasma and there's no blur effect,
@@ -50,6 +54,3 @@
 
 3. Go to `System Settings > KWin Scripts > Enable Force Blur`.
 
-### If you're using Windows or Mac and something's wrong
-
-1. Sadly, I only have archlinux, so a feedback is welcome if it works on your platform.

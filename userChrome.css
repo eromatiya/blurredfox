@@ -398,8 +398,6 @@ hbox.tab-content[pinned=true] .tab-text {
 	height: var(--bf-tab-height) !important;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
-	margin-inline-start: 2px !important;
-	margin-inline-end: 2px !important;
 }
 
 .tabbrowser-tab[soundplaying="true"] {
@@ -410,6 +408,13 @@ hbox.tab-content[pinned=true] .tab-text {
 .tab-icon-sound {
   /* 	Hide icon of audio */
 	display: none !important;
+}
+
+/* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true] */
+#tabbrowser-tabs[positionpinnedtabs=true] .tabbrowser-tab[pinned=true] .tab-stack {
+	position: relative !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
 }
 
 #tabs-newtab-button {
