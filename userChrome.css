@@ -1,53 +1,115 @@
-:root {
+/* Dark Mode */
+:root:-moz-lwtheme-brighttext {
 	--bf-bg: #00000066;
-	--bf-hover-bg: #fefefe20;
 	--bf-color: #f2f2f2;
+	--bf-hover-bg: #fefefe20;
 	--bf-focused-color: #fefefe;
 	
-	--bf-accent-bg: #4C5FF9CC;
-
 	--bf-icon-color: #f2f2f2;
-	--bf-switch-tab-color: #6498EF;
-	--bf-bookmark-color: #53E2AE;
-
-	--bf-tab-font-size: 11pt;
-	--bf-tab-font-weight: 500;
+	
+	--bf-urlbar-bg: var(--bf-bg);
+	--bf-urlbar-color: var(--bf-color);
+	--bf-urlbar-focused-color: var(--bf-focused-color);
+	--bf-urlbar-active-bg: #000000BB;
+	--bf-urlbar-results-url-color: var(--bf-color);3
+	
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
+	
+	--bf-sidebar-bg: var(--bf-bg);
+	--bf-sidebar-color: var(--bf-color);
+	
+	--bf-splitter-bg: var(--bf-bg);
+	
+	--bf-menupopup-bg: var(--bf-bg);
+	--bf-menupopup-color: var(--bf-color);
+	
+	--autocomplete-popup-background: var(--bf-bg) !important;
+	--default-arrowpanel-background: var(--bf-bg) !important;
+	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;	
+}
 
+/* Light Mode */
+:root:-moz-lwtheme-darktext {
+	--bf-bg: #f2f2f266;
+	--bf-color: #252525;
+	--bf-hover-bg: #1a1a1a20;
+	--bf-focused-color: #0a0a0a;
+	
+	--bf-icon-color: #0a0a0a;
+	
+	--bf-urlbar-bg: var(--bf-bg);
+	--bf-urlbar-color: var(--bf-color);
+	--bf-urlbar-focused-color: var(--bf-focused-color);
+	--bf-urlbar-active-bg: #f2f2f2BB;
+	--bf-urlbar-results-url-color: var(--bf-color);
+	
+	--bf-tab-color: var(--bf-color);
+	--bf-tab-selected-bg: var(--bf-bg);
+	
+	--bf-sidebar-bg: var(--bf-bg);
+	--bf-sidebar-color: var(--bf-color);
+	
+	--bf-splitter-bg: var(--bf-bg);
+	
+	--bf-menupopup-bg: var(--bf-bg);
+	--bf-menupopup-color: var(--bf-color);
+	
+	--autocomplete-popup-background: var(--bf-bg) !important;
+	--default-arrowpanel-background: var(--bf-bg) !important;
+	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;
+}
+
+/* Global/Default Variable */
+/* Set variables regardless of color */
+:root {
+  --bf-bg: #252525;
+	--bf-color: #f2f2f2;
+	--bf-hover-bg: #353535;
+	--bf-focused-color: #fefefe;
+	--bf-icon-color: var(--bf-color);
+	
+	--bf-urlbar-bg: #1a1a1a;
+	--bf-urlbar-color: var(--bf-color);
+	--bf-urlbar-focused-color: var(--bf-focused-color);
+	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
+	--bf-urlbar-results-url-color: var(--bf-color);
+	
+	--bf-tab-color: var(--bf-color);
+	--bf-tab-selected-bg: #353535;
+	
+	--bf-sidebar-bg: var(--bf-bg);
+	--bf-sidebar-color: var(--bf-color);
+	
+	--bf-splitter-bg: var(--bf-bg);
+	
+	--bf-menupopup-bg: var(--bf-bg);
+	--bf-menupopup-color: var(--bf-color);
+	
+	
+	--bf-accent-bg: #4C5FF9CC;
+	--bf-urlbar-results-font-size: 12pt;
+	--bf-urlbar-results-font-weight: 550;
+	--bf-urlbar-font-size: 12pt;
+	--bf-urlbar-font-weight: 500;
+	
+	--bf-tab-font-size: 11pt;
+	--bf-tab-font-weight: 500;
+	
+	--bf-navbar-padding: 4px;
+	--bf-switch-tab-color: #6498EF;
+	--bf-bookmark-color: #53E2AE;
+	
 	--bf-tab-height: 32px;
 	--bf-tab-border-radius: 6px;
 	--bf-tab-soundplaying-bg: #985EFFCC;
-
-	--bf-navbar-padding: 4px;
-  
-	--bf-urlbar-bg: var(--bf-bg);
-	--bf-urlbar-active-bg: #000000BB;
-	--bf-urlbar-color: var(--bf-color);
-	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-font-size: 12pt;
-	--bf-urlbar-font-weight: 500;
-
-	--bf-urlbar-results-font-size: 12pt;
-	--bf-urlbar-results-font-weight: 550;
-	--bf-urlbar-results-url-color: var(--bf-color);
-
-	--bf-sidebar-bg: transparent;
-	--bf-sidebar-color: var(--bf-color);
-
-	--bf-menupopup-bg: #00000090;
-	--bf-menupopup-color: var(--bf-color);
-	
-	--bf-splitter-bg: #00000090;
-
-	--autocomplete-popup-background: var(--bf-bg) !important;
-	--default-arrowpanel-background: var(--bf-bg) !important;
+		
 	--default-arrowpanel-color: #fefefa !important;
-	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;
 	--panel-disabled-color: #f9f9fa80;
 	--toolbar-bgcolor: transparent !important;
 	--urlbar-separator-color: transparent !important;
 }
+
 
 /*
 ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█
@@ -67,6 +129,8 @@ Transparent Window
 ░█▀▀░█▀█░█▀█░▀█▀
 ░█▀▀░█░█░█░█░░█░
 ░▀░░░▀▀▀░▀░▀░░▀░
+
+I'm not sure if this does anything
 */
 
 * {
@@ -140,18 +204,15 @@ toolbarbutton {
    background: var(--bf-hover-bg) !important;
 }
 
-.megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
+#urlbar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
+	display: none !important;
 	background: transparent !important;
 	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-.megabar[open=true] > #urlbar-background {
+#urlbar[open=true] > #urlbar-background {
 	background: var(--bf-urlbar-active-bg) !important;
-}
-
-#navigator-toolbox, toolbaritem {
-	border: none !important;
 }
 
 .urlbar-icon {
@@ -168,24 +229,6 @@ toolbarbutton {
 	display: none !important;
 }
 
-#star-button {
-  /* URL bar bookmark button */
-	display: initial !important;
-}
-
-#star-button:hover:not(.no-hover):not([open=true]) {
-	background: var(--bf-hover-bg) !important;
-}
-
-#star-button:hover:active:not(.no-hover),
-#star-button[open=true] {
-	background: var(--bf-hover-bg) !important;
-}
-
-.toolbarbutton-text {
-	color: var(--bf-icon-color)  !important;
-}
-
 .urlbarView-row[type="bookmark"] > span{
 	color: var(--bf-bookmark-color) !important;
 }
@@ -194,14 +237,15 @@ toolbarbutton {
 	color: var(--bf-switch-tab-color) !important;
 }
 
+
 #urlbar-results {
 	font-weight: var(--bf-urlbar-results-font-weight);
 	font-size: var(--bf-urlbar-results-font-size) !important;
 	color: var(--bf-urlbar-results-color) !important;
 }
 
+/* Hover background color */
 .urlbarView-row-inner:hover {
-  /* 	hover background color */
 	background: var(--bf-accent-bg) !important;
 }
 
@@ -218,11 +262,6 @@ toolbarbutton {
 	text-align: center !important;
 }
 
-::-moz-selection {
-	/* URL bar hightlight color */
-	background-color: var(--bf-accent-bg) !important;
-}
-
 #searchbar {
 	background: var(--bf-bg) !important;
 	border: none !important;
@@ -233,24 +272,57 @@ toolbarbutton {
 	font-weight: 700 !important;
 }
 
+/* URL bar hightlight color */
+::-moz-selection {
+	background-color: var(--bf-accent-bg) !important;
+}
+
+/* Bookmark button - Star button */
+#star-button {
+  /* URL bar bookmark button */
+	display: none !important;
+}
+
+#star-button:hover:not(.no-hover):not([open=true]) {
+	background: var(--bf-hover-bg) !important;
+}
+
+#star-button:hover:active:not(.no-hover),
+#star-button[open=true] {
+	background: var(--bf-hover-bg) !important;
+}
+
+#navigator-toolbox, toolbaritem {
+	border: none !important;
+}
+
+#navigator-toolbox::after {
+	border-bottom: 0 !important;
+}
+
+/* Remove horizontal line on navbar */
+#nav-bar {
+	box-shadow: none !important;
+	border-top: none !important;
+}
+
+.toolbarbutton-text {
+	color: var(--bf-icon-color)  !important;
+}
+
+/* Back button */
 #back-button > .toolbarbutton-icon {
 	--backbutton-background: transparent !important;
 	border: none !important;
 	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-#back-button {
-	list-style-image: url("left-arrow.svg") !important;
-}
-
-#forward-button {
-	list-style-image: url("right-arrow.svg") !important;
-}
-
+/* Tracking */
 #tracking-protection-icon-container {
-/* 	display: none !important; */
+	display: none !important;
 }
 
+/* Identity */
 #identity-box {
 	display: none !important;
 }
@@ -267,7 +339,6 @@ toolbarbutton {
 	background: var(--bf-hover-bg) !important;
 }
 
-
 /* 
 ░▀█▀░█▀█░█▀▄░█▀▄░█▀█░█▀▄
 ░░█░░█▀█░█▀▄░█▀▄░█▀█░█▀▄
@@ -276,33 +347,39 @@ toolbarbutton {
 The tabs container
 */
 
+/* Move tab bar beneath the url bar */
 #titlebar {
-	/* Move tab bar beneath the url bar */
+/* 	-moz-box-ordinal-group: 1 !important; */
 	-moz-box-ordinal-group: 3 !important;
 }
 
+#titlebar::after {
+	border-bottom: 0 !important;
+}
+
+/* Transparent tabs */
 .toolbar-items {	
 	background-color: transparent !important;
 	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
+/* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
-  /* 	Set minimum height for tab bar */
-	--tab-min-height: 0px;
+	--tab-min-height: 0;
 	margin-top: 4px !important;
 	margin-bottom: 4px !important;
 	margin-left: 20px !important;
 	margin-right: 20px !important;
 }
 
+/* 	Hide tab bar if there's only one tab */
 #tabbrowser-tabs tab:only-of-type,
 #tabbrowser-tabs tab:only-of-type + #tabs-newtab-button {
-  /* 	Hide tab bar if there's only one tab */
 	display: none !important;
 }
 
+/* Stretch Tabs */
 .tabbrowser-tab[fadein]:not([pinned]) {
-	/* Stretch Tabs */
 	max-width: none !important;
 }
 
@@ -321,15 +398,15 @@ The tabs container
 	opacity: 0.5 !important;
 }
 
+/* Remove the "lines" in tab sides */
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
-	/* Remove the "lines" in tabs */
 	border-left: none !important;
 }
 
 .tabbrowser-arrowscrollbox {
 	margin-inline-start: 4px !important;
-	margin-inline-end: 0px !important;
+	margin-inline-end: 0 !important;
 }
 
 .tab-text {
@@ -357,7 +434,7 @@ The tabs container
 
 /* Adjust tab label width */
 .tab-label-container {
-	min-width: 03 !important;
+	min-width: 3px !important;
 }
 
 /* If tab close button is not present, don't force favicon to the center */
@@ -368,27 +445,28 @@ The tabs container
 	margin-left: 0 !important;
 }
 
+/* 	Hide close tab button */
 .tab-close-button {
-  /* 	Hide close tab button */
 	display: none !important;
 }
 
+/* Tab icon */
 hbox.tab-content .tab-icon-image {
-	/* Tab icon */
 	display: initial !important;
 }
 
+/* Show the icon of pinned tabs */
 hbox.tab-content[pinned=true] .tab-icon-image {
-  /* 	Show the icon of pinned tabs */
 	display: initial !important;
 }
 
+/* Hide text of pinned tabs */
 hbox.tab-content[pinned=true] .tab-text {
 	display: none !important;
 }
 
+/* 	Hide the blue line on top of tab */
 .tab-line, .tab-bottom-line {
-  /* 	Hide the tab line */
 	display: none !important;
 }
 
@@ -396,17 +474,27 @@ hbox.tab-content[pinned=true] .tab-text {
 	border-radius: var(--bf-tab-border-radius) !important;
 	border-width: 0;
 	height: var(--bf-tab-height) !important;
+	overflow: hidden;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
+.tabbrowser-tab:hover {
+	background: var(--bf-hover-bg) !important;
+	box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+
+/* 	Audio playing background */
 .tabbrowser-tab[soundplaying="true"] {
-  /* 	Audio playing background */
 	background-color: var(--bf-tab-soundplaying-bg) !important;
 }
 
+#tabbrowser-tabs {
+	--tab-loading-fill: var(--bf-color) !important;
+}
+
+/* 	Hide icon of audio */
 .tab-icon-sound {
-  /* 	Hide icon of audio */
 	display: none !important;
 }
 
@@ -417,18 +505,10 @@ hbox.tab-content[pinned=true] .tab-text {
 	transform: translateY(-50%) !important;
 }
 
-#tabs-newtab-button {
-	list-style-image: url("add.svg") !important;
-	opacity: 1;
-}
 
 .private-browsing-indicator { 
-	display: none;
-	background: var(--bf-bg);
-}
-
-tab.tabbrowser-tab {
-	overflow: hidden;
+	display: block;
+	background: transparent;
 }
 
 /* Remove hover effects on tab bar buttons */
@@ -438,16 +518,43 @@ tab.tabbrowser-tab {
 	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
 
-tab.tabbrowser-tab:hover {
-	background: var(--bf-hover-bg) !important;
-	box-shadow: 0 1px 4px rgba(0,0,0,.05);
+/* Left to Right Alignment of tabs toolbar */
+/* #TabsToolbar {
+  direction: rtl;
 }
 
 #tabbrowser-tabs {
-	--tab-loading-fill: var(--bf-color) !important;
+  direction: ltr;
 }
+ */
 
 /* 
+░█▀█░█▀▄░█▀▄░█▀█░█░█░█▀█░█▀█░█▀█░█▀▀░█░░
+░█▀█░█▀▄░█▀▄░█░█░█▄█░█▀▀░█▀█░█░█░█▀▀░█░░
+░▀░▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀░░░▀░▀░▀░▀░▀▀▀░▀▀▀
+ 
+The dropdown menus
+*/
+
+.panel-arrowcontent {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+toolbarseparator {
+	display: none !important;
+}
+
+box.panel-arrowbox {
+	display: none;
+}
+
+box.panel-arrowcontent {
+	border-radius: 8px !important;
+	border: none !important;
+}
+
+/*
 ░█▀▀░▀█▀░█▀█░█▀▄░█▀▄░█▀█░█▀▄
 ░█▀▀░░█░░█░█░█░█░█▀▄░█▀█░█▀▄
 ░▀░░░▀▀▀░▀░▀░▀▀░░▀▀░░▀░▀░▀░▀
@@ -469,94 +576,13 @@ The findbar
 
 .findbar-find-previous,
 .findbar-find-next {
-	margin: 0px !important;
+	margin: 0 !important;
 	border: none !important;
 }
 #browser #appcontent #tabbrowser-tabbox .findbar-find-fast {
 	background-color: var(--bf-bg) !important;
 }
 
-/* 
-░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄
-░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄
-░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀
-
-Contains history, bookmarks, and etc.
-*/
-
-#history-panel,
-#sidebar-search-container,
-#bookmarksPanel {
-	background: var(--bf-bg) !important;
-}
-
-#search-box {
-	-moz-appearance: none !important;
-	background: var(--bf-bg) !important;
-	border-radius: 6px !important;
-}
-
-#sidebar-search-container {
-	background-color: var(--bf-sidebar-bg) !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
-}
-
-.close-icon, .urlbar-icon {
-	fill: var(--bf-icon-color) !important;
-}
-
-#sidebar-icon {
-  display: none !important;
-}
-
-.sidebar-placesTree {
-	color: var(--bf-sidebar-color) !important;
-}
-
-#sidebar-switcher-target {
-	color: var(--bf-sidebar-color) !important;
-}
-
-#sidebar-header {
-	background: var(--bf-bg) !important;
-}
-
-#sidebar-box {
-	--sidebar-background-color: var(--bf-sidebar-bg) !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
-}
-
-#sidebar-splitter {
-	border: none !important;
-	opacity: 1 !important;
-	background-color: var(--bf-splitter-bg) !important;
-}
-
-/* 
-░█▀█░█▀▄░█▀▄░█▀█░█░█░█▀█░█▀█░█▀█░█▀▀░█░░
-░█▀█░█▀▄░█▀▄░█░█░█▄█░█▀▀░█▀█░█░█░█▀▀░█░░
-░▀░▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀░░░▀░▀░▀░▀░▀▀▀░▀▀▀
- 
-The dropdown menus
-*/
-
-.panel-arrowcontent {
-	padding: 0px !important;
-	margin: 0px !important;
-}
-
-toolbarseparator {
-	display: none !important;
-}
-
-box.panel-arrowbox {
-	display: none;
-}
-
-box.panel-arrowcontent {
-	border-radius: 8px !important;
-	border: none !important;
-}
 
 /* 
 ░█▀▀░█▀█░█▀█░▀█▀░█▀▀░█░█░▀█▀░█▄█░█▀▀░█▀█░█░█
@@ -571,43 +597,22 @@ popup > menu > menupopup,
 menupopup > menu > menupopup {
 	-moz-appearance: none !important;
 	background: var(--bf-menupopup-bg) !important;
-	color: #fff !important;
-	border: 0px !important;
+	color: var(--base-color) !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	padding: 2px 0px 2px 0px  !important;
+	padding: 2px 0 2px 0  !important;
 }
 
 menupopup menuseparator {
 	-moz-appearance: none !important;
 	background: #525A6D  !important;
-	margin: 2px 0px 2px 0px !important;
+	margin: 2px 0 2px 0 !important;
 	padding: 0 !important;
 	border-top: none !important;
 	border-color: transparent !important;
 }
 
-/* 
-░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█░█▀▄░█░█░▀█▀░▀█▀░█▀█░█▀█░█▀▀
-░█▄█░░█░░█░█░█░█░█░█░█▄█░█▀▄░█░█░░█░░░█░░█░█░█░█░▀▀█
-░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░▀▀▀
- 
-The control buttons. Contains, close, minimize, and maximize buttons
-*/
-
-#autohide-context, #window-controls {
-	display:none!important;
-}
-
-:root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
-	display: none !important;
-}
-
-:root[tabsintitlebar][sizemode="maximized"] #nav-bar {
-	padding-left: 3px !important;
-}
-
-
-/* 
+/*
 ░█▀▀░█░█░█▀▀░▀█▀░█▀█░█▄█░▀█▀░▀▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█
 ░█░░░█░█░▀▀█░░█░░█░█░█░█░░█░░▄▀░░█▀█░░█░░░█░░█░█░█░█░█▄█░░█░░█░█░█░█░█░█░█▄█
 ░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀
@@ -622,6 +627,7 @@ The customization window
 .customizationmode-button {
 	-moz-appearance: none !important;
 	background: var(--bf-bg) !important;
+	color: var(--bf-color) !important;
 	padding: 5px !important;
 	border-radius: 6px !important;
 }
@@ -635,4 +641,32 @@ The customization window
 
 .customizationmode-button label {
 	color: var(--bf-color) !important;
+}
+
+/*
+░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█░█▀▄░█░█░▀█▀░▀█▀░█▀█░█▀█░█▀▀
+░█▄█░░█░░█░█░█░█░█░█░█▄█░█▀▄░█░█░░█░░░█░░█░█░█░█░▀▀█
+░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░▀▀▀
+ 
+The control buttons. Contains, close, minimize, and maximize buttons
+*/
+
+#autohide-context {
+	display: none !important;
+}
+
+#window-controls[hidden="true"] {
+	display: none !important;
+}
+
+#window-controls[hidden="false"] {
+	display: inline-flex !important;
+}
+
+:root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
+	display: none !important;
+}
+
+:root[tabsintitlebar][sizemode="maximized"] #nav-bar {
+	padding-left: 3px !important;
 }

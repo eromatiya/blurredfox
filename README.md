@@ -1,10 +1,18 @@
 # Blurred fox
 
-### A ~~blurred~~ transparent safari-like firefox CSS theme
+### A modern Firefox CSS Theme
 
-| blurredfox |
+| Default Color Scheme |
 | --- |
-| ![screenshot](screenshot.png) |
+| ![screenshot](scrot/default.webp) |
+
+| Dark Color Scheme |
+| --- |
+| ![screenshot](scrot/dark.webp) |
+
+| Light Color Scheme |
+| --- |
+| ![screenshot](scrot/light.webp) |
 
 ## How to
 
@@ -34,7 +42,7 @@
 5. Search for **`toolkit.legacyUserProfileCustomizations.stylesheets`**, **`layers.acceleration.force-enabled`**, **`gfx.webrender.all`**, and **`svg.context-properties.content.enabled`**. Make sure to **enable them all!**
 6. Go to your Firefox profile located in `$HOME/.mozilla/firefox/XXXXXXX.default-release/`.
 7. Create a folder and name it **`chrome`**, then assuming that you already clone this repo, just copy the theme to `chrome` folder.
-8. Finally, change the Firefox theme from default to dark. **This is important!**
+8. Finally, you can now change whatever colorscheme you want.
 
 ## Note
 
@@ -44,7 +52,7 @@
 
 1. **Sadly, I only have archlinux, so I cannot guarantee that it will work on Windows10 and macOS. A feedback is welcome if it works on your platform.**
 
-1. **The theme does not provide the blur effect!** Make sure you have a compositor with blur support running! KDE Plasma, macOS, and Windows 10 have this by default, but you need to enable it! If you're using linux, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
+2. **The theme does not provide the blur effect!** Make sure you have a compositor with blur support running! KDE Plasma, macOS, and Windows 10 have this by default, but you need to enable it! If you're using linux, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
 
 ### If you're using Plasma and there's no blur effect,
 
@@ -53,4 +61,4 @@
 2. Enable the blur effect on all applications by installing a KWin script called [Force Blur](https://store.kde.org/p/1294604/).
 
 3. Go to `System Settings > KWin Scripts > Enable Force Blur`.
-
+2
