@@ -73,7 +73,7 @@
 	--bf-focused-color: #fefefe;
 	--bf-icon-color: var(--bf-color);
 	
-	--bf-navbar-bg: #000000AA;
+	--bf-navbar-bg: #00000066;
 	--bf-urlbar-bg: #00000066;
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
@@ -91,7 +91,6 @@
 	
 	--bf-menupopup-bg: var(--bf-bg);
 	--bf-menupopup-color: var(--bf-color);
-	
 	
 	--bf-backdrop-blur: 6px;
 	--bf-accent-bg: #4C5FF9CC;
@@ -186,7 +185,7 @@ toolbarbutton {
 
 #urlbar {
 	--urlbar-height: 36px !important;
-	--urlbar-toolbar-height: 42px !important;
+	--urlbar-toolbar-height: 40px !important;
 }
 
 #urlbar {
@@ -387,14 +386,16 @@ The tabs container
 	margin-right: 20px !important;
 }
 
-/* 	Hide tab bar if there's only one tab */
-/* 
-#tabbrowser-tabs tab:only-of-type,
-#tabbrowser-tabs tab:only-of-type + #tabs-newtab-button {
-	display: none !important;
+/* Hide solo tab */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
+  visibility: collapse;
 }
-*/
 
+/* Hide New Tab Button immediately next to solo tab */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type + toolbarbutton {
+	visibility: collapse;
+}
+	
 	/* Stretch Tabs */
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: none !important;
