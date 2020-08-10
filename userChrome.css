@@ -14,6 +14,7 @@
 	--bf-urlbar-active-bg: #000000BB;
 	--bf-urlbar-results-url-color: var(--bf-color);3
 	
+	--bf-tab-background: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -46,6 +47,7 @@
 	--bf-urlbar-active-bg: #f2f2f2BB;
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
+	--bf-tab-background: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -78,6 +80,7 @@
 	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
+	--bf-tab-background: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: #353535;
 	
@@ -93,7 +96,7 @@
 	--bf-backdrop-blur: 6px;
 	--bf-accent-bg: #4C5FF9CC;
 	
-	--bf-urlbar-radius: 8px;
+	--bf-urlbar-radius: 9px;
 	--bf-urlbar-results-font-size: 12pt;
 	--bf-urlbar-results-font-weight: 550;
 	--bf-urlbar-font-size: 12pt;
@@ -155,7 +158,7 @@ Contains navbar, urlbar, and etc.
 */
 
 .browser-toolbar {
-	background: var(--bf-bg) !important;
+	background: var(--bf-tab-background) !important;
 }
 
 toolbar {
