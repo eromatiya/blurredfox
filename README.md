@@ -71,6 +71,6 @@
 
 PR's are welcome!
 
-- [] Move window controls to navbar <sup>send help</sup>
-- [] Fix inconsistencies
-- [] Better CSS
+- [ ] Move window controls to navbar <sup>send help</sup>
+- [ ] Fix inconsistencies
+- [ ] Better CSS
