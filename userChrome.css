@@ -67,13 +67,13 @@
 /* Global/Default Variable */
 /* Set variables regardless of color */
 :root {
-	--bf-bg: #252525;
+	--bf-bg: #000000;
 	--bf-color: #f2f2f2;
 	--bf-hover-bg: #353535;
 	--bf-focused-color: #fefefe;
 	--bf-icon-color: var(--bf-color);
 	
-	--bf-navbar-bg: #252525AA;
+	--bf-navbar-bg: #000000AA;
 	--bf-urlbar-bg: #00000066;
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
@@ -82,7 +82,7 @@
 	
 	--bf-tab-background: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: #353535;
+	--bf-tab-selected-bg: #1a1a1a;
 	
 	--bf-sidebar-bg: var(--bf-bg);
 	--bf-sidebar-color: var(--bf-color);
@@ -138,7 +138,7 @@ Transparent Window
 ░█▀▀░█░█░█░█░░█░
 ░▀░░░▀▀▀░▀░▀░░▀░
 
-I'm not sure if this does anything
+I'm not sure if this does something
 */
 
 * {
@@ -374,7 +374,6 @@ The tabs container
 
 /* Transparent tabs */
 .toolbar-items {
-	margin: 3px 0 0 0 !important;
 	background-color: transparent !important;
 	-moz-appearance: -moz-mac-vibrancy-dark !important;
 }
