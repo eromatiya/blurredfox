@@ -63,7 +63,7 @@
 }
 
 /* Global/Default Variable */
-/* Set variables regardless of color */
+/* Set variables regardless of colorscheme */
 :root {
 	--bf-bg: #252525;
 	--bf-color: #F2F2F2;
@@ -96,6 +96,10 @@
 	
 	/* All the CSS variables below are global */
 	/* These applies to all color schemes */
+
+	/* If windows - `-moz-win-glass`, if macOS - `-moz-mac-vibrancy-dark` */
+	--bf-moz-appearance: -moz-win-glass !important; 
+
 	--bf-sidebar-searchbar-radius: 6px;
 
 	--bf-backdrop-blur: 6px;
@@ -134,7 +138,7 @@ Transparent Window
 	background: transparent !important;
 	font-kerning: normal;
 	border: none !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 /*
@@ -238,10 +242,10 @@ toolbarbutton {
 	box-shadow: none !important;
 	display: none !important;
 	background: transparent !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
-#urlbar[open=true] > #urlbar-background {
+#urlbar[open="true"] > #urlbar-background {
 	background: var(--bf-urlbar-active-bg) !important;
 	backdrop-filter: blur(var(--bf-backdrop-blur)) !important;
 }
@@ -339,7 +343,7 @@ toolbaritem {
 #back-button > .toolbarbutton-icon {
 	--backbutton-background: transparent !important;
 	border: none !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 /* Tracking */
@@ -387,7 +391,7 @@ The tabs container
 /* Transparent tabs */
 .toolbar-items {
 	background-color: transparent !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 /* 	Set minimum height for tab bar */
@@ -421,7 +425,7 @@ The tabs container
 .tab-background {
 	border: none !important;
 	background: transparent !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 .tab-background[selected="true"] {
@@ -566,7 +570,7 @@ hbox.tab-content[pinned=true] .tab-text {
 #TabsToolbar {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 /* Left to Right Alignment of tabs toolbar */
@@ -578,6 +582,35 @@ hbox.tab-content[pinned=true] .tab-text {
   direction: ltr;
 }
 */
+
+/*
+░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀
+
+Sidebar
+*/
+
+#sidebar-box {
+	--sidebar-background-color: var(--bf-sidebar-bg) !important;
+	--sidebar-text-color: var(--bf-sidebar-color) !important;
+}
+
+#sidebar,
+.sidebar-panel {
+	background: transparent !important;
+	color: var(--bf-sidebar-color) !important;
+}
+
+/* Sidebar searchbar */
+#sidebar-search-container #search-box{
+	-moz-appearance:none !important;
+	background-color: var(--bf-sidebar-searchbar-bg) !important;
+	border: none !important;
+	color: var(--bf-color) !important;
+	padding: 6px !important;
+	border-radius: var(--bf-sidebar-searchbar-radius) !important;
+}
 
 /*
 ░█▀█░█▀▄░█▀▄░█▀█░█░█░█▀█░█▀█░█▀█░█▀▀░█░░
@@ -618,7 +651,7 @@ The findbar
 	-moz-appearance: none !important;
 	background: transparent !important;
 	border: none !important;
-	-moz-appearance: -moz-mac-vibrancy-dark !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 #browser #appcontent #tabbrowser-tabbox findbar {
@@ -713,39 +746,9 @@ The control buttons. Contains, close, minimize, and maximize buttons
 	display: inline-flex !important;
 }
 
+/* Hide titlebar-buttonbox if there's single tab */
+/*
 :root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
 	display: none !important;
 }
-
-:root[tabsintitlebar][sizemode="maximized"] #nav-bar {
-	padding-left: 3px !important;
-}
-
-/*
-░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄
-░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄
-░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀
-
-Sidebar
 */
-
-#sidebar-box {
-	--sidebar-background-color: var(--bf-sidebar-bg) !important;
-	--sidebar-text-color: var(--bf-sidebar-color) !important;
-}
-
-#sidebar,
-.sidebar-panel {
-	background: transparent !important;
-	color: var(--bf-sidebar-color) !important;
-}
-
-/* Sidebar searchbar */
-#sidebar-search-container #search-box{
-	-moz-appearance:none !important;
-	background-color: var(--bf-sidebar-searchbar-bg) !important;
-	border: none !important;
-	color: var(--bf-color) !important;
-	padding: 6px !important;
-	border-radius: var(--bf-sidebar-searchbar-radius) !important;
-}
