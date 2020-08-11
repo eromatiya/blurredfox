@@ -400,15 +400,19 @@ The tabs container
 }
 
 /* Hide solo tab */
+/*
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type {
   visibility: collapse;
 }
+*/
 
 /* Hide New Tab Button immediately next to solo tab */
+/*
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"]:only-of-type + toolbarbutton {
 	visibility: collapse;
 }
-	
+*/
+
 	/* Stretch Tabs */
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: none !important;
