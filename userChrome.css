@@ -1,11 +1,11 @@
 /* Dark Mode */
 :root:-moz-lwtheme-brighttext {
 	--bf-bg: #00000066;
-	--bf-color: #f2f2f2;
-	--bf-hover-bg: #fefefe20;
-	--bf-focused-color: #fefefe;
+	--bf-color: #F2F2F2;
+	--bf-hover-bg: #FEFEFE20;
+	--bf-focused-color: #FEFEFE;
 	
-	--bf-icon-color: #f2f2f2;
+	--bf-icon-color: #F2F2F2;
 	
 	--bf-navbar-bg: var(--bf-bg);
 	--bf-urlbar-bg: var(--bf-bg);
@@ -20,7 +20,6 @@
 	
 	--bf-sidebar-bg: var(--bf-bg);
 	--bf-sidebar-color: var(--bf-color);
-	
 	--bf-splitter-bg: var(--bf-bg);
 	
 	--bf-menupopup-bg: var(--bf-bg);
@@ -33,12 +32,12 @@
 
 /* Light Mode */
 :root:-moz-lwtheme-darktext {
-	--bf-bg: #f2f2f266;
+	--bf-bg: #F2F2F662;
 	--bf-color: #252525;
-	--bf-hover-bg: #1a1a1a20;
-	--bf-focused-color: #0a0a0a;
+	--bf-hover-bg: #1A1A1A20;
+	--bf-focused-color: #0A0A0A;
 	
-	--bf-icon-color: #0a0a0a;
+	--bf-icon-color: #0A0A0A;
 	
 	--bf-navbar-bg: var(--bf-bg);
 	--bf-urlbar-bg: var(--bf-bg);
@@ -53,7 +52,6 @@
 	
 	--bf-sidebar-bg: var(--bf-bg);
 	--bf-sidebar-color: var(--bf-color);
-	
 	--bf-splitter-bg: var(--bf-bg);
 	
 	--bf-menupopup-bg: var(--bf-bg);
@@ -70,11 +68,11 @@
 	--bf-bg: #000000;
 	--bf-color: #f2f2f2;
 	--bf-hover-bg: #353535;
-	--bf-focused-color: #fefefe;
+	--bf-focused-color: #FEFEFE;
 	--bf-icon-color: var(--bf-color);
 	
-	--bf-navbar-bg: #00000066;
-	--bf-urlbar-bg: #00000066;
+	--bf-navbar-bg: #000000AA;
+	--bf-urlbar-bg: #1A1A1A;
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
 	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
@@ -82,16 +80,24 @@
 	
 	--bf-tab-background: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: #1a1a1a;
+	--bf-tab-selected-bg: #1A1A1A;
 	
 	--bf-sidebar-bg: var(--bf-bg);
 	--bf-sidebar-color: var(--bf-color);
-	
 	--bf-splitter-bg: var(--bf-bg);
+	--bf-sidebar-searchbar-bg: #1A1A1A;
 	
 	--bf-menupopup-bg: var(--bf-bg);
 	--bf-menupopup-color: var(--bf-color);
+
+	--autocomplete-popup-background: var(--bf-bg) !important;
+	--default-arrowpanel-background: var(--bf-bg) !important;
+	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;
 	
+	/* All the CSS variables below are global */
+	/* These applies to all color schemes */
+	--bf-sidebar-searchbar-radius: 6px;
+
 	--bf-backdrop-blur: 6px;
 	--bf-accent-bg: #4C5FF9CC;
 	
@@ -116,7 +122,6 @@
 	--toolbar-bgcolor: transparent !important;
 	--urlbar-separator-color: transparent !important;
 }
-
 
 /*
 ░▀█▀░█▀▄░█▀█░█▀█░█▀▀░█▀█░█▀█░█▀▄░█▀▀░█▀█░█▀▀░█░█
@@ -702,4 +707,33 @@ The control buttons. Contains, close, minimize, and maximize buttons
 
 :root[tabsintitlebar][sizemode="maximized"] #nav-bar {
 	padding-left: 3px !important;
+}
+
+/*
+░█▀▀░▀█▀░█▀▄░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀█░░█░░█░█░█▀▀░█▀▄░█▀█░█▀▄
+░▀▀▀░▀▀▀░▀▀░░▀▀▀░▀▀░░▀░▀░▀░▀
+
+Sidebar
+*/
+
+#sidebar-box {
+	--sidebar-background-color: var(--bf-sidebar-bg) !important;
+	--sidebar-text-color: var(--bf-sidebar-color) !important;
+}
+
+#sidebar,
+.sidebar-panel {
+	background: transparent !important;
+	color: var(--bf-sidebar-color) !important;
+}
+
+/* Sidebar searchbar */
+#sidebar-search-container #search-box{
+	-moz-appearance:none !important;
+	background-color: var(--bf-sidebar-searchbar-bg) !important;
+	border: none !important;
+	color: var(--bf-color) !important;
+	padding: 6px !important;
+	border-radius: var(--bf-sidebar-searchbar-radius) !important;
 }
