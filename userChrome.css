@@ -11,7 +11,7 @@
 	--bf-urlbar-bg: var(--bf-bg);
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-active-bg: #000000BB;
+	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);3
 	
 	--bf-tab-background: var(--bf-bg);
@@ -43,7 +43,7 @@
 	--bf-urlbar-bg: var(--bf-bg);
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-active-bg: #f2f2f2BB;
+	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
 	--bf-tab-background: var(--bf-bg);
@@ -188,14 +188,22 @@ toolbarbutton {
 	--toolbarbutton-active-background: var(--bf-hover-bg) !important;
 }
 
+/* URL bar max-width and centered hack */
 #urlbar {
+	max-width: 70% !important;
+	margin: 0 15% !important;
+}
+
+/* URL bar and toolbar height if not compact mode */
+:root:not([uidensity="compact"]) #urlbar {
 	--urlbar-height: 36px !important;
 	--urlbar-toolbar-height: 40px !important;
 }
 
-#urlbar {
-	max-width: 70% !important;
-	margin: 0 15% !important;
+/* URL bar and toolbar height if compact mode */
+:root[uidensity="compact"] #urlbar {
+	--urlbar-height: 30px !important;
+	--urlbar-toolbar-height: 34px !important;
 }
 
 #urlbar-input:focus {
