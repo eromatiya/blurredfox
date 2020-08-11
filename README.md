@@ -14,11 +14,17 @@
 | --- |
 | ![screenshot](scrot/light.webp) |
 
+## Requirements
+
++ Latest stable Firefox
++ Compositor with blur shader (optional)
++ Linux machine - untested on macOS and Windows10
+
 ## How to
 
 ### Quick install for the linux lads
 
-1. Run
+1. Run:
   
   ```bash
   $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/master/install.sh)"
@@ -36,11 +42,9 @@
 
 ### Manual Installation
 
-1. Open the Firefox Menu located on the top-right corner with a humburger menu(three horizontal lines).
-2. Select `Preferences`, then `Preferences` again.
-3. Go to `Advanced`, find the `Config Editor` button then press it.
-4. A dialog will warn you, but ignore it, ~~just do it~~ press the `I accept the risk!` button.
-5. Search for these:
+1. Open `about:config` page.
+2. A dialog will warn you, but ignore it, ~~just do it~~ press the `I accept the risk!` button.
+3. Search for these:
 
 	+ **`toolkit.legacyUserProfileCustomizations.stylesheets`**
 	+ **`layers.acceleration.force-enabled`**
@@ -50,15 +54,15 @@
 	+ **`svg.context-properties.content.enabled`**
 
 	Then make sure to **enable them all!**
-6. Go to your Firefox profile. Linux distributions has it in `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
-7. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
-8. Finally, you can now change whatever colorscheme you want in the Cusomization Window.
+4. Go to your Firefox profile. Linux distributions has it in `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
+5. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
+6. Finally, you can now change whatever colorscheme you want in the Cusomization Window.
 
 ## Note
 
 ### If you're using Windows or macOS and something's wrong
 
-1. **Sadly, I only have archlinux, so I cannot guarantee that it will work on Windows10 and macOS. A feedback is welcome if it works on your platform. PR is also welcome!**
+1. **I only have Archlinux, so I cannot guarantee that it will work on Windows10 and macOS without a problem. A feedback and PR is absolutely welcome!**
 
 ### If there's no blur effect
 
