@@ -14,7 +14,7 @@
 	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
-	--bf-tab-background: var(--bf-bg);
+	--bf-tab-background: #000000AA;
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -46,7 +46,7 @@
 	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
-	--bf-tab-background: var(--bf-bg);
+	--bf-tab-background: #F2F2F2AA;
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -65,14 +65,14 @@
 /* Global/Default Variable */
 /* Set variables regardless of color */
 :root {
-	--bf-bg: #000000;
-	--bf-color: #f2f2f2;
+	--bf-bg: #252525;
+	--bf-color: #F2F2F2;
 	--bf-hover-bg: #353535;
 	--bf-focused-color: #FEFEFE;
 	--bf-icon-color: var(--bf-color);
 	
-	--bf-navbar-bg: #000000AA;
-	--bf-urlbar-bg: #1A1A1A;
+	--bf-navbar-bg: #252525CC;
+	--bf-urlbar-bg: #252525;
 	--bf-urlbar-color: var(--bf-color);
 	--bf-urlbar-focused-color: var(--bf-focused-color);
 	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
