@@ -14,7 +14,7 @@
 	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
-	--bf-tab-background: #000000AA;
+	--bf-tab-toolbar-bg: #000000AA;
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -46,7 +46,7 @@
 	--bf-urlbar-active-bg: var(--bf-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
-	--bf-tab-background: #F2F2F2AA;
+	--bf-tab-toolbar-bg: #F2F2F2AA;
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: var(--bf-bg);
 	
@@ -78,7 +78,7 @@
 	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
 	--bf-urlbar-results-url-color: var(--bf-color);
 	
-	--bf-tab-background: var(--bf-bg);
+	--bf-tab-toolbar-bg: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
 	--bf-tab-selected-bg: #1A1A1A;
 	
@@ -166,7 +166,7 @@ Contains navbar, urlbar, and etc.
 */
 
 .browser-toolbar {
-	background: var(--bf-tab-background) !important;
+	background: var(--bf-tab-toolbar-bg) !important;
 }
 
 toolbar {
@@ -472,12 +472,24 @@ The tabs container
 
 /* Center all content */
 .tab-content {
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: -1px;
 	min-width: 100% !important;
 	padding: 0 10px !important;
+}
+
+/* A way to center the label and icon while 
+the close button is positioned to the far right */
+.tab-content::before{
+	content: "";
+	display: -moz-box;
+	-moz-box-flex: 1
+}
+
+/* Tab close button */
+.tab-close-button {
+/* 	display: none !important; */
 }
 
 /* Prevent tab icons size breaking */
@@ -498,11 +510,6 @@ The tabs container
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([busy]) .tab-icon-image,
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([image]) .tab-label-container {
 	margin-left: 0 !important;
-}
-
-/* 	Hide close tab button */
-.tab-close-button {
-	display: none !important;
 }
 
 /* Tab icon */
