@@ -80,7 +80,7 @@
 	
 	--bf-tab-toolbar-bg: var(--bf-bg);
 	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: #1A1A1A;
+	--bf-tab-selected-bg: #353535;
 	
 	--bf-sidebar-bg: var(--bf-bg);
 	--bf-sidebar-color: var(--bf-color);
@@ -296,6 +296,12 @@ toolbarbutton {
 	text-align: center !important;
 }
 
+/* Urlbar buttons */
+.urlbar-icon,
+.urlbar-page-action {
+	border-radius: 6px;
+}
+
 #searchbar {
 	background: var(--bf-bg) !important;
 	border: none !important;
@@ -314,7 +320,7 @@ toolbarbutton {
 /* Bookmark button - Star button */
 #star-button {
 	/* URL bar bookmark button */
-	display: none !important;
+	display: block !important;
 }
 
 #star-button:hover:not(.no-hover):not([open=true]) {
@@ -397,8 +403,8 @@ The tabs container
 /* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
 	--tab-min-height: 0;
-	margin-top: 4px !important;
-	margin-bottom: 4px !important;
+	margin-top: 6px !important;
+	margin-bottom: 6px !important;
 	margin-left: 20px !important;
 	margin-right: 20px !important;
 }
@@ -489,7 +495,7 @@ the close button is positioned to the far right */
 
 /* Tab close button */
 .tab-close-button {
-/* 	display: none !important; */
+	opacity: 1 !important;
 }
 
 /* Prevent tab icons size breaking */
