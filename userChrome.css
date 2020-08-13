@@ -1,99 +1,4 @@
-/* Dark Mode */
-:root:-moz-lwtheme-brighttext {
-	--bf-bg: #00000066;
-	--bf-color: #F2F2F2;
-	--bf-hover-bg: #FEFEFE20;
-	--bf-focused-color: #FEFEFE;
-	
-	--bf-icon-color: #F2F2F2;
-	
-	--bf-navbar-bg: var(--bf-bg);
-	--bf-urlbar-bg: var(--bf-bg);
-	--bf-urlbar-color: var(--bf-color);
-	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-active-bg: var(--bf-bg);
-	--bf-urlbar-results-url-color: var(--bf-color);
-	
-	--bf-tab-toolbar-bg: #000000AA;
-	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: var(--bf-bg);
-	
-	--bf-sidebar-bg: var(--bf-bg);
-	--bf-sidebar-color: var(--bf-color);
-	--bf-splitter-bg: var(--bf-bg);
-	
-	--bf-menupopup-bg: var(--bf-bg);
-	--bf-menupopup-color: var(--bf-color);
-	
-	--autocomplete-popup-background: var(--bf-bg) !important;
-	--default-arrowpanel-background: var(--bf-bg) !important;
-	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;	
-}
-
-/* Light Mode */
-:root:-moz-lwtheme-darktext {
-	--bf-bg: #F2F2F662;
-	--bf-color: #252525;
-	--bf-hover-bg: #1A1A1A20;
-	--bf-focused-color: #0A0A0A;
-	
-	--bf-icon-color: #0A0A0A;
-	
-	--bf-navbar-bg: var(--bf-bg);
-	--bf-urlbar-bg: var(--bf-bg);
-	--bf-urlbar-color: var(--bf-color);
-	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-active-bg: var(--bf-bg);
-	--bf-urlbar-results-url-color: var(--bf-color);
-	
-	--bf-tab-toolbar-bg: #F2F2F2AA;
-	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: var(--bf-bg);
-	
-	--bf-sidebar-bg: var(--bf-bg);
-	--bf-sidebar-color: var(--bf-color);
-	--bf-splitter-bg: var(--bf-bg);
-	
-	--bf-menupopup-bg: var(--bf-bg);
-	--bf-menupopup-color: var(--bf-color);
-	
-	--autocomplete-popup-background: var(--bf-bg) !important;
-	--default-arrowpanel-background: var(--bf-bg) !important;
-	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;
-}
-
-/* Global/Default Variable */
-/* Set variables regardless of colorscheme */
 :root {
-	--bf-bg: #252525;
-	--bf-color: #F2F2F2;
-	--bf-hover-bg: #353535;
-	--bf-focused-color: #FEFEFE;
-	--bf-icon-color: var(--bf-color);
-	
-	--bf-navbar-bg: #252525CC;
-	--bf-urlbar-bg: #252525;
-	--bf-urlbar-color: var(--bf-color);
-	--bf-urlbar-focused-color: var(--bf-focused-color);
-	--bf-urlbar-active-bg: var(--bf-urlbar-bg);
-	--bf-urlbar-results-url-color: var(--bf-color);
-	
-	--bf-tab-toolbar-bg: var(--bf-bg);
-	--bf-tab-color: var(--bf-color);
-	--bf-tab-selected-bg: #353535;
-	
-	--bf-sidebar-bg: var(--bf-bg);
-	--bf-sidebar-color: var(--bf-color);
-	--bf-splitter-bg: var(--bf-bg);
-	--bf-sidebar-searchbar-bg: #1A1A1A;
-	
-	--bf-menupopup-bg: var(--bf-bg);
-	--bf-menupopup-color: var(--bf-color);
-
-	--autocomplete-popup-background: var(--bf-bg) !important;
-	--default-arrowpanel-background: var(--bf-bg) !important;
-	--lwt-toolbarbutton-icon-fill: var(--bf-icon-color) !important;
-	
 	/* All the CSS variables below are global */
 	/* These applies to all color schemes */
 
@@ -115,14 +20,15 @@
 	--bf-switch-tab-color: #6498EF;
 	--bf-bookmark-color: #53E2AE;
 	
+	--bf-tab-selected-bg: #77777788;
 	--bf-tab-font-size: 11pt;
 	--bf-tab-font-weight: 400;
 	--bf-tab-height: 36px;
 	--bf-tab-border-radius: 8px;
 	--bf-tab-soundplaying-bg: #985EFFCC;
 
-	--default-arrowpanel-color: #fefefa !important;
-	--panel-disabled-color: #f9f9fa80;
+/* 	--default-arrowpanel-color: #fefefa !important; */
+/* 	--panel-disabled-color: #f9f9fa80; */
 	--toolbar-bgcolor: transparent !important;
 	--urlbar-separator-color: transparent !important;
 }
@@ -135,7 +41,6 @@
 Transparent Window
 */
 #main-window {
-	background: transparent !important;
 	font-kerning: normal;
 	border: none !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
@@ -166,7 +71,6 @@ Contains navbar, urlbar, and etc.
 */
 
 .browser-toolbar {
-	background: var(--bf-tab-toolbar-bg) !important;
 }
 
 toolbar {
@@ -174,7 +78,6 @@ toolbar {
 }
 
 toolbar#nav-bar {
-	background: var(--bf-navbar-bg) !important;
 	padding: var(--bf-navbar-padding) !important;
 	
 	/* Remove horizontal line on navbar */
@@ -188,8 +91,6 @@ toolbarbutton {
 }
 
 .toolbarbutton-1 {
-	--toolbarbutton-hover-background: var(--bf-hover-bg) !important;
-	--toolbarbutton-active-background: var(--bf-hover-bg) !important;
 }
 
 /* URL bar max-width and centered hack */
@@ -211,52 +112,42 @@ toolbarbutton {
 }
 
 #urlbar-input:focus {
-	color: var(--bf-urlbar-focused-color) !important;
 }
 
 #urlbar-background {
-	background: var(--bf-urlbar-bg) !important;
 	border-radius: var(--bf-urlbar-radius) !important;
 	border: none !important;
 }
 
 .urlbar-icon:not([disabled]):hover,
 .urlbar-icon-wrapper:not([disabled]):hover {
-	background: var(--bf-hover-bg) !important;
 }
 
 .urlbar-icon[open],
 .urlbar-icon-wrapper[open],
 .urlbar-icon:not([disabled]):hover:active,
 .urlbar-icon-wrapper:hover:active {
-	background: var(--bf-hover-bg) !important;
 }
 
 .urlbar-icon-wrapper[open] > .urlbar-icon,
 .urlbar-icon-wrapper > .urlbar-icon:hover,
 .urlbar-icon-wrapper > .urlbar-icon:hover:active {
-	background: var(--bf-hover-bg) !important;
 }
 
 #urlbar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
 	display: none !important;
-	background: transparent !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 #urlbar[open="true"] > #urlbar-background {
-	background: var(--bf-urlbar-active-bg) !important;
 	backdrop-filter: blur(var(--bf-backdrop-blur)) !important;
 }
 
 .urlbar-icon {
-	color: var(--bf-icon-color)  !important;
 }
 
 .urlbar-icon > image {
-	fill: var(--bf-icon-color) !important;
-	color: var(--bf-icon-color) !important;
 }
 
 .urlbarView-favicon,
@@ -265,33 +156,27 @@ toolbarbutton {
 }
 
 .urlbarView-row[type="bookmark"] > span{
-	color: var(--bf-bookmark-color) !important;
 }
 
 .urlbarView-row[type="switchtab"] > span{
-	color: var(--bf-switch-tab-color) !important;
 }
 
 #urlbar-results {
 	-weight: var(--bf-urlbar-results-font-weight);
 	font-size: var(--bf-urlbar-results-font-size) !important;
-	color: var(--bf-urlbar-results-color) !important;
 }
 
 /* Hover background color */
 .urlbarView-row-inner:hover {
-	background: var(--bf-accent-bg) !important;
 }
 
 .urlbarView-url, .search-panel-one-offs-container {
-	color: var(--bf-urlbar-results-url-color) !important;
 	font-weight: var(--bf-urlbar-results-font-weight);
 	font-size: var(--bf-urlbar-font-size) !important;
 }
 
 #urlbar-input {
 	font-size: var(--bf-urlbar-font-size) !important;
-	color: var(--bf-urlbar-color) !important;
 	font-weight: var(--bf-urlbar-font-weight)!important;
 	text-align: center !important;
 }
@@ -303,18 +188,15 @@ toolbarbutton {
 }
 
 #searchbar {
-	background: var(--bf-bg) !important;
 	border: none !important;
 }
 
 .searchbar-textbox {
-	color: var(--bf-focus-fg) !important;
 	font-weight: 700 !important;
 }
 
 /* URL bar hightlight color */
 ::-moz-selection {
-	background-color: var(--bf-accent-bg) !important;
 }
 
 /* Bookmark button - Star button */
@@ -324,12 +206,10 @@ toolbarbutton {
 }
 
 #star-button:hover:not(.no-hover):not([open=true]) {
-	background: var(--bf-hover-bg) !important;
 }
 
 #star-button:hover:active:not(.no-hover),
 #star-button[open=true] {
-	background: var(--bf-hover-bg) !important;
 }
 
 #navigator-toolbox,
@@ -342,7 +222,6 @@ toolbaritem {
 }
 
 .toolbarbutton-text {
-	color: var(--bf-icon-color)  !important;
 }
 
 /* Back button */
@@ -364,14 +243,12 @@ toolbaritem {
 
 #identity-box:hover:not(.no-hover):not([open=true]),
 #tracking-protection-icon-container:hover:not(.no-hover):not([open=true]) {
-	background: var(--bf-hover-bg) !important;
 }
 
 #identity-box:hover:active:not(.no-hover),
 #identity-box[open=true],
 #tracking-protection-icon-container:hover:active:not(.no-hover),
 #tracking-protection-icon-container[open=true] {
-	background: var(--bf-hover-bg) !important;
 }
 
 /* 
@@ -396,7 +273,6 @@ The tabs container
 
 /* Transparent tabs */
 .toolbar-items {
-	background-color: transparent !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
@@ -430,7 +306,6 @@ The tabs container
 
 .tab-background {
 	border: none !important;
-	background: transparent !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
@@ -439,7 +314,7 @@ The tabs container
 }
 
 .tab-background:not[visuallyselected] {
-	background: var(--bf-tab-selected-bg) !important;
+/* 	background: var(--bf-tab-selected-bg) !important; */
 	opacity: 0.5 !important;
 }
 
@@ -473,7 +348,6 @@ The tabs container
 .tab-text {
 	font-weight: var(--bf-tab-font-weight);
 	font-size: var(--bf-tab-font-size) !important;
-	color: var(--bf-tab-color);
 }
 
 /* Center all content */
@@ -548,17 +422,14 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 .tabbrowser-tab:hover {
-	background: var(--bf-hover-bg) !important;
 	box-shadow: 0 1px 4px rgba(0,0,0,.05);
 }
 
 /* 	Audio playing background */
 .tabbrowser-tab[soundplaying="true"] {
-	background-color: var(--bf-tab-soundplaying-bg) !important;
 }
 
 #tabbrowser-tabs {
-	--tab-loading-fill: var(--bf-color) !important;
 }
 
 /* 	Hide icon of audio */
@@ -576,13 +447,10 @@ hbox.tab-content[pinned=true] .tab-text {
 
 .private-browsing-indicator { 
 	display: block;
-	background: transparent;
 }
 
 /* Remove hover effects on tab bar buttons */
 #TabsToolbar {
-	--toolbarbutton-active-background: transparent !important;
-	--toolbarbutton-hover-background: transparent !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
@@ -605,22 +473,16 @@ Sidebar
 */
 
 #sidebar-box {
-	--sidebar-background-color: var(--bf-sidebar-bg) !important;
-	--sidebar-text-color: var(--bf-sidebar-color) !important;
 }
 
 #sidebar,
 .sidebar-panel {
-	background: transparent !important;
-	color: var(--bf-sidebar-color) !important;
 }
 
 /* Sidebar searchbar */
 #sidebar-search-container #search-box{
 	-moz-appearance:none !important;
-	background-color: var(--bf-sidebar-searchbar-bg) !important;
 	border: none !important;
-	color: var(--bf-color) !important;
 	padding: 6px !important;
 	border-radius: var(--bf-sidebar-searchbar-radius) !important;
 }
@@ -662,13 +524,11 @@ The findbar
 #browser #appcontent #tabbrowser-tabbox findbar,
 #browser #appcontent #tabbrowser-tabbox tabpanels {
 	-moz-appearance: none !important;
-	background: transparent !important;
 	border: none !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
 #browser #appcontent #tabbrowser-tabbox findbar {
-	background-color: var(--bf-bg) !important;
 }
 
 .findbar-find-previous,
@@ -677,7 +537,6 @@ The findbar
 	border: none !important;
 }
 #browser #appcontent #tabbrowser-tabbox .findbar-find-fast {
-	background-color: var(--bf-bg) !important;
 }
 
 /* 
@@ -691,17 +550,13 @@ Right-click menu
 menupopup, popup,
 popup > menu > menupopup,
 menupopup > menu > menupopup {
-	-moz-appearance: none !important;
-	background: var(--bf-menupopup-bg) !important;
-	color: var(--base-color) !important;
 	border: 0 !important;
 	border-radius: 4px !important;
 	padding: 2px 0 2px 0  !important;
 }
 
 menupopup menuseparator {
-	-moz-appearance: none !important;
-	background: #525A6D  !important;
+/* 	-moz-appearance: none !important; */
 	margin: 2px 0 2px 0 !important;
 	padding: 0 !important;
 	border-top: none !important;
@@ -717,26 +572,19 @@ The customization window
 */
 
 #customization-container {
-	background: var(--bf-bg) !important;
 }
 
 .customizationmode-button {
-	-moz-appearance: none !important;
-	background: var(--bf-bg) !important;
-	color: var(--bf-color) !important;
 	padding: 5px !important;
 	border-radius: 6px !important;
 }
 
 .customizationmode-button:hover {
-	-moz-appearance: none !important;
-	background: var(--bf-hover-bg) !important;
 	padding: 5px !important;
 	border-radius: 6px !important;
 }
 
 .customizationmode-button label {
-	color: var(--bf-color) !important;
 }
 
 /*
