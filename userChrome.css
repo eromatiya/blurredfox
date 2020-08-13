@@ -9,6 +9,7 @@
 
 	--bf-accent-bg: #4C5FF9CC;
 	
+	--bf-urlbar-hightlight-bg: var(--bf-accent-bg);
 	--bf-urlbar-radius: 9px;
 	--bf-urlbar-results-font-size: 12pt;
 	--bf-urlbar-results-font-weight: 550;
@@ -193,6 +194,7 @@ toolbarbutton {
 
 /* URL bar hightlight color */
 ::-moz-selection {
+	background-color: var(--bf-urlbar-hightlight-bg) !important;
 }
 
 /* Bookmark button - Star button */
