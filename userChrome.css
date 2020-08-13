@@ -7,7 +7,6 @@
 
 	--bf-sidebar-searchbar-radius: 6px;
 
-	--bf-backdrop-blur: 6px;
 	--bf-accent-bg: #4C5FF9CC;
 	
 	--bf-urlbar-radius: 9px;
@@ -17,8 +16,6 @@
 	--bf-urlbar-font-weight: 500;
 	
 	--bf-navbar-padding: 6px;
-	--bf-switch-tab-color: #6498EF;
-	--bf-bookmark-color: #53E2AE;
 	
 	--bf-tab-selected-bg: #77777788;
 	--bf-tab-font-size: 11pt;
@@ -141,7 +138,6 @@ toolbarbutton {
 }
 
 #urlbar[open="true"] > #urlbar-background {
-	backdrop-filter: blur(var(--bf-backdrop-blur)) !important;
 }
 
 .urlbar-icon {
@@ -427,6 +423,7 @@ hbox.tab-content[pinned=true] .tab-text {
 
 /* 	Audio playing background */
 .tabbrowser-tab[soundplaying="true"] {
+	background-color: var(--bf-tab-soundplaying-bg) !important;
 }
 
 #tabbrowser-tabs {
