@@ -22,7 +22,7 @@
 
 ## How to
 
-### Quick install for the linux lads
+### Quick install for the linux lads with stable builds
 
 1. Run:
   
@@ -34,6 +34,7 @@
 
 #### Installation notes:
 
++ Firefox's stable builds are only supported at the moment.
 + It is advisible to check the script first before running it.
 + You need `bash` to run it.
 + The script will fail if you have multiple profile directory! Make sure you only have one!
