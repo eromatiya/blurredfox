@@ -24,7 +24,7 @@
 
 ### Quick install for the linux lads
 
-1. Run the script below, but make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will still default to stable.
+1. Run the script below. If you are using a different build like nightly, beta, etc., make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will default to stable.
 
 	+ stable - Firefox Stable Build
 	+ dev - Firefox Developer Edition
@@ -33,8 +33,6 @@
 	+ esr - Firefox Extended Support Release
 
 	```
-	# Examples:
-
 	# Stable build's profile
   	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- stable
 
