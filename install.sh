@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+FF_USER_DIRECTORY=""
+CHROME_DIRECTORY=""
+
 message() {
 	printf "%s\n" "$*" >&2;
 }
@@ -47,11 +50,56 @@ EOF
 	message "blurredfox successfully installed! To enable the transparency change the theme to Dark in preferences! Enjoy!"
 }
 
-FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.default-(release|default|esr)')" 
+function check_profile() {
+	FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" 
+}
+
+# Check args
+if [[ ! -z "${@}" ]] && [[ ! -z "${1}" ]] ;
+then
+
+	if [[ "${1}" == "dev" ]];
+	then
+		check_profile "dev-edition-default"
+	elif [[ "${1}" == "beta" ]];
+	then
+		check_profile "default-beta"
+	elif [[ "${1}" == "nightly" ]];
+	then
+		check_profile "default-nightly"
+	elif [[ "${1}" == "stable" ]];
+	then
+		check_profile "default-release"
+	elif [[ "${1}" == "esr" ]];
+	then
+		check_profile "default-esr"
+	else
+		echo "
+Invalid argument!
+
+stable	- Firefox Stable Build
+dev 	- Firefox Developer Edition
+beta 	- Firefox Beta
+nightly - Firefox Nightly
+esr 	- Firefox Extended Support Release
+
+Example:
+./install stable
+./install dev
+
+Defaults to 'stable' if empty.
+"
+		exit
+	fi
+else
+	# check_profile "(dev-edition|default)-(release|beta|nightly|default|esr)"
+	check_profile "default-release"
+fi
+
 if [[ -n $FF_USER_DIRECTORY ]];
 then
 	message "[>>] Firefox user profile directory located..."
-	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY" -maxdepth 1 -type d -name 'chrome')"
+	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY/" -maxdepth 1 -type d -name 'chrome')"
 	if [[ -n $CHROME_DIRECTORY ]];
 	then
 		# Check if the chrome folder contains files
