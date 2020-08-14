@@ -1,16 +1,16 @@
-# Blurred fox
+## blurredfox
 
 ### A modern Firefox CSS Theme
 
-| Default Color Scheme |
+| Default Colorscheme (Uses System Colors) |
 | --- |
 | ![screenshot](scrot/default.webp) |
 
-| Dark Color Scheme |
+| Dark Colorscheme |
 | --- |
 | ![screenshot](scrot/dark.webp) |
 
-| Light Color Scheme |
+| Light Colorscheme |
 | --- |
 | ![screenshot](scrot/light.webp) |
 
@@ -54,27 +54,49 @@
 	+ **`svg.context-properties.content.enabled`**
 
 	Then make sure to **enable them all!**
-4. Go to your Firefox profile. Linux distributions has it in `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
+
+4. Go to your Firefox profile.
+	+ Linux - `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
+	+ Windows 10 - `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`.
+	+ macOS - `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX`.
+
 5. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
-6. Finally, you can now change whatever colorscheme you want in the Cusomization Window.
+6. Restart Firefox.
+7. Finally, you can now change whatever colorscheme you want in the Cusomization Window.
+
+	+ Default - Uses system colors, but uses the theme's layout.
+	+ Dark - Dark colorscheme. Good for the night.
+	+ Light - Bright colorscheme. Good for killing the eyes.
 
 ## Note
 
+### Some UI are broken!
+
+1. Check if you're using the latest stable version of Firefox.
+2. If you're not using Linux check the next note below.
+
 ### If you're using Windows or macOS and something's wrong
 
-1. **I only have Archlinux, so I cannot guarantee that it will work on Windows10 and macOS without a problem. A feedback and PR is absolutely welcome!**
+1. I only have Archlinux, so I cannot guarantee that it will work on Windows 10 and macOS without a problem. A feedback and a PR is absolutely welcome! All you can do or try is to install the theme, then change the value of `--bf-moz-appearance` variable to either `-moz-win-glass` if windows and `-moz-mac-vibrancy-dark` if macOS. Still, do no expect that it will work without a problem. The platforms are untested!
 
-### If there's no blur effect
+### Liar! Your theme's name is `blurredfox`, ***where is the blur***?!
 
-1. **The theme does not provide the blur effect!** Make sure you have a compositor with blur support running! KDE Plasma, macOS, and Windows 10 have this by default, but you need to enable it! If you're using linux, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
+1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can however have the blur effect by:
 
-### If you're using Plasma and there's no blur effect,
+	+ Making sure you have a compositor and it supports blur.
+	+ If you're not using GNOME or KDE Plasma that has its own compositors, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
+	+ GNOME's compositor, mutter, doesn't support blur. Hey, GNOME devs, it's already 2020. Just kidding!
+	+ If you're using KDE Plasma, read the next note below.
+
+### I'm using KDE Plasma, but there's no blur! How many other lies have I been told by the council?
 
 1. Enable the blur in your compositor. Go to `System Settings > Desktop Effects > Enable Blur`. Note that this will not enable the blur effect on all applications.
 
 2. Enable the blur effect on all applications by installing a KWin script called [Force Blur](https://store.kde.org/p/1294604/).
 
 3. Go to `System Settings > KWin Scripts > Enable Force Blur`.
+
+4. Change its settings. If there's no settings/settings icon, Logout then re-login.
 
 ### Scrollbar is missing
 
@@ -84,6 +106,6 @@
 
 PR's are welcome!
 
-- [ ] Hide `TabsToolbar` if tab bar is hidden
-- [ ] Fix inconsistencies
+- [ ] Render site content under the navbar like macOS
+- [ ] Fix UI inconsistencies
 - [ ] Better CSS
