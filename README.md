@@ -18,7 +18,7 @@
 
 + Latest stable Firefox
 + Compositor with blur shader (optional)
-+ Linux machine - untested on macOS and Windows10
++ Linux machine - untested on macOS and Windows10 - might work though
 
 ## How to
 
@@ -81,7 +81,7 @@
 
 ### Liar! Your theme's name is `blurredfox`, ***where is the blur***?!
 
-1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can however have the blur effect by:
+1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can, however, have the blur effect by:
 
 	+ Making sure you have a compositor and it supports blur.
 	+ If you're not using GNOME or KDE Plasma that has its own compositors, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
@@ -91,16 +91,27 @@
 ### I'm using KDE Plasma, but there's no blur! How many other lies have I been told by the council?
 
 1. Enable the blur in your compositor. Go to `System Settings > Desktop Effects > Enable Blur`. Note that this will not enable the blur effect on all applications.
-
-2. Enable the blur effect on all applications by installing a KWin script called [Force Blur](https://store.kde.org/p/1294604/).
-
+2. Enable the blur effect on all applications by installing a KWin script called [Force Blur](https://store.kde.org/p/1294604/). Make sure to read its manual. Don't you ever dare to create an issue about Force Blur! Just kidding! But yeah, I'm serious.
 3. Go to `System Settings > KWin Scripts > Enable Force Blur`.
+4. Change its settings. If there's no settings/settings icon, Logout. Re-login.
 
-4. Change its settings. If there's no settings/settings icon, Logout then re-login.
+### Where is the scrollbar?
 
-### Scrollbar is missing
+1. You can adjust the value of `scrollbar-width` in `userContent.css`.
+2. Restart Firefox.
 
-1. The scrollbar is hidden by default, you can enable/show it by changing the value of `scrollbar-width` in `userContent.css`.
+### I hate the colors! Why is everything transparent?!
+
+1. You can change the colors in `userChrome.css`.
+2. The transparency is only applied to `Dark` and `Light` colorschemes. `No transparency == No blur`.
+
+## Got a problem?
+
+If you have already read the README, free to open an issue [here](https://github.com/manilarome/blurredfox/issues)!
+
+## Got a patch?
+
+You're absolutely welcome to submit a pull request [here](https://github.com/manilarome/blurredfox/pulls)!
 
 ## TODO
 
