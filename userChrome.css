@@ -626,7 +626,6 @@ hbox.tab-content[pinned=true] .tab-text {
 
 /* 	Audio Icon */
 .tab-icon-sound {
-	display: block !important;
 }
 
 /* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true] */
