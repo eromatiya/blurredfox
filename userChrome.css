@@ -29,8 +29,6 @@
 	--bf-tab-border-radius: 8px;
 	--bf-tab-soundplaying-bg: #985EFFCC;
 
-/* 	--default-arrowpanel-color: #fefefa !important; */
-/* 	--panel-disabled-color: #f9f9fa80; */
 	--toolbar-bgcolor: transparent !important;
 	--urlbar-separator-color: transparent !important;
 }
@@ -45,7 +43,7 @@
 	
 	--bf-icon-color: #0A0A0A;
 	--bf-tab-toolbar-bg: #F2F2F2AA;
-	--bf-tab-selected-bg: var(--bf-bg);
+	--bf-tab-selected-bg: #777777AA;
 	--bf-navbar-bg: var(--bf-bg);
 	--bf-urlbar-bg: var(--bf-bg);
 	--bf-urlbar-active-bg: var(--bf-bg);
@@ -626,9 +624,9 @@ hbox.tab-content[pinned=true] .tab-text {
 #tabbrowser-tabs {
 }
 
-/* 	Hide icon of audio */
+/* 	Audio Icon */
 .tab-icon-sound {
-	display: none !important;
+	display: block !important;
 }
 
 /* Center pinned tab stack(Contains icon) if #tabbrowser-tabs[positionpinnedtabs=true] */
