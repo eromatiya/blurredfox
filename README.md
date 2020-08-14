@@ -16,30 +16,40 @@
 
 ## Requirements
 
-+ Latest stable Firefox
++ The latest Firefox
 + Compositor with blur shader (optional)
-+ Linux machine - untested on macOS and Windows10 - might work though
++ Linux machine - untested on macOS and Windows 10 - might work though (optional)
 
 ## How to
 
-### Quick install for the linux lads with stable builds
+### Quick install for the linux lads
 
-1. Run:
-  
-  ```bash
-  $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/master/install.sh)"
-  ```
+1. Run the script below. If you are using a different build like nightly, beta, etc., make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will default to stable.
 
-2. After the confirmation message that the theme is successfully installed, open firefox. Change colorscheme by **`Open Menu > Customize > Change Colorscheme`**.
+	+ stable - Firefox Stable Build
+	+ dev - Firefox Developer Edition
+	+ beta - Firefox Beta
+	+ nightly - Firefox Nightly
+	+ esr - Firefox Extended Support Release
+
+	```
+	# Stable build's profile
+  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- stable
+
+  	# Nightly build's profile
+  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- nightly
+  	```
+
+2. After the confirmation message that the theme is successfully installed, open firefox. Change the colorscheme by **`Open Menu > Customize > Change Colorscheme`**.
 
 #### Installation notes:
 
-+ Firefox's stable builds are only supported at the moment.
++ If you have a multiple firefox builds, the script will still run without a problem. Just make sure to pass your target firefox build.
++ If you or your firefox build have a multiple profile, the script will return an error! Make sure you only have one!
 + It is advisible to check the script first before running it.
 + You need `bash` to run it.
-+ The script will fail if you have multiple profile directory! Make sure you only have one!
-+ If you have a current chrome folder in your profile directory, the script will make a backup.
-+ If the installation script is not working, a PR is welcome!
++ If you have an existing chrome folder, the script will make a backup of it in your profile directory.
++ If the installation script is not working, feel free to submit an issue or a pull request.
 
 ### Manual Installation
 
@@ -69,16 +79,22 @@
 	+ Dark - Dark colorscheme. Good for the night.
 	+ Light - Bright colorscheme. Good for killing the eyes.
 
+### Uninstall
+
+1. Go to your profile directory.
+2. Delete the `chrome` folder.
+3. If you used the installation script, you can also delete the `user.js` inside your profile directory.
+
 ## Note
 
 ### Some UI are broken!
 
-1. Check if you're using the latest stable version of Firefox.
+1. Check if you're using the latest version of Firefox.
 2. If you're not using Linux check the next note below.
 
 ### If you're using Windows or macOS and something's wrong
 
-1. I only have Archlinux, so I cannot guarantee that it will work on Windows 10 and macOS without a problem. A feedback and a PR is absolutely welcome! All you can do or try is to install the theme, then change the value of `--bf-moz-appearance` variable to either `-moz-win-glass` if windows and `-moz-mac-vibrancy-dark` if macOS. Still, do no expect that it will work without a problem. The platforms are untested!
+1. I only have Archlinux, so I cannot guarantee that it will work on Windows 10 and macOS without a problem. A feedback and a PR is absolutely welcome! All you can do or try is to install the theme, then change the value of `--bf-moz-appearance` variable to either `-moz-win-glass` if Windows 10 and `-moz-mac-vibrancy-dark` if macOS. Still, do not expect that it will work without a problem. The theme's untested on these platforms!
 
 ### Liar! Your theme's name is `blurredfox`, ***where is the blur***?!
 
@@ -105,6 +121,10 @@
 
 1. You can change the colors in `userChrome.css`.
 2. The transparency is only applied to `Dark` and `Light` colorschemes. `No transparency == No blur`.
+
+### How can I set or change the colors for the Default colorscheme?
+
+1. The default colorscheme are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors. So all you can do is to switch theme to change its colorscheme.
 
 ## Got a problem?
 

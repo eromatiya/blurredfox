@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+FF_USER_DIRECTORY=""
+CHROME_DIRECTORY=""
+
 message() {
 	printf "%s\n" "$*" >&2;
 }
@@ -36,22 +39,70 @@ EOL
 		message " [!!] Problem detected while downloading the theme. Terminating..."
 		return 1
 	fi
-	cat <<-'EOF'
-░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█▀▄
-░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█░█
-░▀▀░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀▀░
-┏━┛┏━┃┃ ┃
-┏━┛┃ ┃ ┛ 
-┛  ━━┛┛ ┛
-EOF
+	echo "░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█▀▄"
+	echo "░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█░█"
+	echo "░▀▀░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀▀░"
+	echo "┏━┛┏━┃┃ ┃"
+	echo "┏━┛┃ ┃ ┛ "
+	echo "┛  ━━┛┛ ┛"
 	message "blurredfox successfully installed! To enable the transparency change the theme to Dark in preferences! Enjoy!"
 }
 
-FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.default-(release|default|esr)')" 
+function check_profile() {
+	FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" 
+}
+
+function print_args() {
+	echo "stable	- Firefox Stable Build"
+	echo "dev 	- Firefox Developer Edition"
+	echo "beta 	- Firefox Beta"
+	echo "nightly - Firefox Nightly"
+	echo "esr 	- Firefox Extended Support Release"
+	echo ""
+	echo "Example:"
+	echo "./install stable"
+	echo "./install dev"
+	echo ""
+	echo "Defaults to 'stable' if empty."
+}
+
+# Check args
+if [[ ! -z "${@}" ]] && [[ ! -z "${1}" ]] ;
+then
+
+	if [[ "${1}" == "dev" ]];
+	then
+		check_profile "dev-edition-default"
+	elif [[ "${1}" == "beta" ]];
+	then
+		check_profile "default-beta"
+	elif [[ "${1}" == "nightly" ]];
+	then
+		check_profile "default-nightly"
+	elif [[ "${1}" == "stable" ]];
+	then
+		check_profile "default-release"
+	elif [[ "${1}" == "esr" ]];
+	then
+		check_profile "default-esr"
+	elif [[ "${1}" == "help" ]];
+	then
+		print_args
+		exit
+	else
+		echo -ne "Invalid!\n\n"
+		print_args
+		exit
+	fi
+else
+	# check_profile "(dev-edition|default)-(release|beta|nightly|default|esr)"
+	check_profile "default-release"
+fi
+
 if [[ -n $FF_USER_DIRECTORY ]];
 then
 	message "[>>] Firefox user profile directory located..."
-	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY" -maxdepth 1 -type d -name 'chrome')"
+	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY/" -maxdepth 1 -type d -name 'chrome')"
 	if [[ -n $CHROME_DIRECTORY ]];
 	then
 		# Check if the chrome folder contains files
@@ -62,7 +113,16 @@ then
 		if [ ${#content[@]} -gt 0 ];
 		then
 			message "[>>] Current chrome folder is not empty. Creating a backup in the same directory..."
-			mv "${CHROME_DIRECTORY}" "${CHROME_DIRECTORY}.backup"
+			
+			backup_dir="${CHROME_DIRECTORY}-backup"
+
+			# Create backup folder
+			if [[ ! -d "${backup_dir}" ]];
+			then
+				mkdir "${backup_dir}"
+			fi
+
+			mv --backup=t "${CHROME_DIRECTORY}" "${CHROME_DIRECTORY}-backup"
 			mkdir "${CHROME_DIRECTORY}"
 		fi
 		download_bf
