@@ -79,7 +79,7 @@
 	+ Dark - Dark colorscheme. Good for the night.
 	+ Light - Bright colorscheme. Good for killing the eyes.
 
-### Unsintall
+### Uninstall
 
 1. Go to your profile directory.
 2. Delete the `chrome` folder.
