@@ -46,7 +46,7 @@ EOL
 	echo "┏━┛┏━┃┃ ┃"
 	echo "┏━┛┃ ┃ ┛ "
 	echo "┛  ━━┛┛ ┛"
-	message "blurredfox successfully installed! To enable the transparency change the theme to Dark in preferences! Enjoy!"
+	message "blurredfox successfully installed! Enjoy!"
 }
 
 function check_profile() {
