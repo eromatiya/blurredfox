@@ -21,14 +21,9 @@ download_bf() {
 		FF_THEME="/tmp/blurredfox-master/"
 		cp -r "${FF_THEME}"* "${CHROME_DIRECTORY}"
 
-		cat > "${CHROME_DIRECTORY}/../user.js" <<'EOL'
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); 
-user_pref("layers.acceleration.force-enabled", true);
-user_pref("gfx.webrender.all", true);
-user_pref("gfx.webrender.enabled", true);
-user_pref("svg.context-properties.content.enabled", true);
-user_pref("layout.css.backdrop-filter.enabled", true);
-EOL
+		# Move user.js to the main profile directory
+		mv "${CHROME_DIRECTORY}/user.js" "../"
+
 		if [[ $? -eq 0 ]];
 		then
 			rm -rf "/tmp/blurredfox-master"
