@@ -3,7 +3,7 @@
 	/* These applies to all colorschemes */
 
 	/* If windows - `-moz-win-glass`, if macOS - `-moz-mac-vibrancy-dark` */
-	--bf-moz-appearance: -moz-mac-vibrancy-dark !important;
+	--bf-moz-appearance: -moz-win-glass !important;
 
 	--bf-backdrop-blur: 6px;
 
@@ -589,8 +589,11 @@ hbox.tab-content[pinned=true] .tab-text {
 }
 
 /* 	Hide the blue line on top of tab */
-.tab-line, .tab-bottom-line {
+.tab-line {
 	display: none !important;
+}
+
+.tab-bottom-line {
 }
 
 .tabbrowser-tab {
