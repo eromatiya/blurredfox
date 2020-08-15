@@ -2,6 +2,7 @@
 
 FF_USER_DIRECTORY=""
 CHROME_DIRECTORY=""
+RELEASE_NAME=""
 
 message() {
 	printf "%s\n" "$*" >&2;
@@ -53,6 +54,9 @@ function check_profile() {
 }
 
 function print_args() {
+	echo "Usage:"
+	echo ""
+	echo "help	- Show this message"
 	echo "stable	- Firefox Stable Build"
 	echo "dev 	- Firefox Developer Edition"
 	echo "beta 	- Firefox Beta"
@@ -60,8 +64,9 @@ function print_args() {
 	echo "esr 	- Firefox Extended Support Release"
 	echo ""
 	echo "Example:"
-	echo "./install stable"
-	echo "./install dev"
+	echo "$ ./install stable"
+	echo "$ ./install dev"
+	echo "$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- stable"
 	echo ""
 	echo "Defaults to 'stable' if empty."
 }
@@ -72,30 +77,36 @@ then
 
 	if [[ "${1}" == "dev" ]];
 	then
+		RELEASE_NAME="Developer Edition"
 		check_profile "dev-edition-default"
 	elif [[ "${1}" == "beta" ]];
 	then
+		RELEASE_NAME="Beta"
 		check_profile "default-beta"
 	elif [[ "${1}" == "nightly" ]];
 	then
+		RELEASE_NAME="Nightly"
 		check_profile "default-nightly"
 	elif [[ "${1}" == "stable" ]];
 	then
+		RELEASE_NAME="Stable"
 		check_profile "default-release"
 	elif [[ "${1}" == "esr" ]];
 	then
+		RELEASE_NAME="ESR"
 		check_profile "default-esr"
 	elif [[ "${1}" == "help" ]];
 	then
 		print_args
 		exit
 	else
-		echo -ne "Invalid!\n\n"
+		echo -ne "Invalid parameter!\n"
 		print_args
 		exit
 	fi
 else
 	# check_profile "(dev-edition|default)-(release|beta|nightly|default|esr)"
+	RELEASE_NAME="Stable"
 	check_profile "default-release"
 fi
 
@@ -103,7 +114,7 @@ if [[ -n $FF_USER_DIRECTORY ]];
 then
 	message "[>>] Firefox user profile directory located..."
 	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY/" -maxdepth 1 -type d -name 'chrome')"
-	if [[ -n $CHROME_DIRECTORY ]];
+	if [[ -n "$CHROME_DIRECTORY" ]];
 	then
 		# Check if the chrome folder contains files
 		shopt -s nullglob dotglob 
@@ -130,6 +141,7 @@ then
 		message "[>>] Chrome directory does not exist! Creating one..."
 		mkdir "${FF_USER_DIRECTORY}/chrome"
 
+		# Check if backup folder exist
 		if [[ $? -eq 0 ]];
 		then
 			CHROME_DIRECTORY="${FF_USER_DIRECTORY}/chrome"
@@ -142,6 +154,6 @@ then
 	fi
 
 else
-	message "[!!] No firefox user profile directory found. Make sure to run firefox atleast once! Terminating..."
+	message "[!!] No Firefox ${RELEASE_NAME} user profile detected! Make sure to run Firefox ${RELEASE_NAME} atleast once! Terminating..."
 	exit 1;
 fi
