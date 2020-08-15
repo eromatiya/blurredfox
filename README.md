@@ -14,15 +14,28 @@
 
 ### Quick install for the linux lads
 
+#### Notes before running the script:
+
++ If you have a multiple firefox builds, the script will still run without a problem. Just make sure to pass your target firefox build.
++ If you or your firefox build have a multiple profile, the script will return an error! Make sure you only have one!
++ It is advisible to check the script first before running it.
++ You need `bash` to run it.
++ If you have an existing chrome folder, the script will make a backup of it in your profile directory.
++ If the installation script is not working, feel free to submit an issue or a pull request.
++ The script will move a file named `user.js` that contains all the preferences needed for blurredfox to work. If you have a current one, make sure to create a backup.
+
 1. Run the script below. If you are using a different build like nightly, beta, etc., make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will default to stable.
 
-	+ stable - Firefox Stable Build
-	+ dev - Firefox Developer Edition
-	+ beta - Firefox Beta
-	+ nightly - Firefox Nightly
-	+ esr - Firefox Extended Support Release
-
 	```
+	# Available parameters:
+	# stable - Firefox Stable Build
+	# dev - Firefox Developer Edition
+	# beta - Firefox Beta
+	# nightly - Firefox Nightly
+	# esr - Firefox Extended Support Release
+
+	# Examples:
+
 	# Stable build's profile
   	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
   	bash -s -- stable
@@ -33,15 +46,6 @@
   	```
 
 2. After the confirmation message that the theme is successfully installed, open firefox. Change the colorscheme by **`Open Menu > Customize > Change colorscheme`**.
-
-#### Installation notes:
-
-+ If you have a multiple firefox builds, the script will still run without a problem. Just make sure to pass your target firefox build.
-+ If you or your firefox build have a multiple profile, the script will return an error! Make sure you only have one!
-+ It is advisible to check the script first before running it.
-+ You need `bash` to run it.
-+ If you have an existing chrome folder, the script will make a backup of it in your profile directory.
-+ If the installation script is not working, feel free to submit an issue or a pull request.
 
 ### Manual Installation
 
