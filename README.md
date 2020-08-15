@@ -2,17 +2,7 @@
 
 ### A modern Firefox CSS Theme
 
-| Default Colorscheme (Uses System Colors) |
-| --- |
-| ![screenshot](scrot/default.webp) |
-
-| Dark Colorscheme |
-| --- |
-| ![screenshot](scrot/dark.webp) |
-
-| Light Colorscheme |
-| --- |
-| ![screenshot](scrot/light.webp) |
+<p align="center"><img alt="Firefox with blurredfox" src="scrot.webp"/><br/><i>Firefox with blurredfox CSS theme</i></p>
 
 ## Requirements
 
@@ -34,13 +24,15 @@
 
 	```
 	# Stable build's profile
-  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- stable
+  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
+  	bash -s -- stable
 
   	# Nightly build's profile
-  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh | bash -s -- nightly
+  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
+  	bash -s -- nightly
   	```
 
-2. After the confirmation message that the theme is successfully installed, open firefox. Change the colorscheme by **`Open Menu > Customize > Change Colorscheme`**.
+2. After the confirmation message that the theme is successfully installed, open firefox. Change the colorscheme by **`Open Menu > Customize > Change colorscheme`**.
 
 #### Installation notes:
 
