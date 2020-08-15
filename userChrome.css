@@ -1,6 +1,6 @@
 :root {
-	/* All the CSS variables below are global */
-	/* These applies to all color schemes */
+	/* All the CSS variables here are global */
+	/* These applies to all colorschemes */
 
 	/* If windows - `-moz-win-glass`, if macOS - `-moz-mac-vibrancy-dark` */
 	--bf-moz-appearance: -moz-win-glass !important;
@@ -26,7 +26,7 @@
 	--bf-tab-font-size: 11pt;
 	--bf-tab-font-weight: 400;
 	--bf-tab-height: 36px;
-	--bf-tab-border-radius: 8px;
+	--bf-tab-border-radius: 6px;
 	--bf-tab-soundplaying-bg: #985EFFCC;
 
 	--toolbar-bgcolor: transparent !important;
@@ -84,7 +84,7 @@
 ░░█░░█▀▄░█▀█░█░█░▀▀█░█▀▀░█▀█░█▀▄░█▀▀░█░█░█░░░░█░
 ░░▀░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░▀░
 
-Transparent Window
+Main window
 */
 #main-window {
 	font-kerning: normal;
@@ -97,7 +97,6 @@ Transparent Window
 	background: transparent !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
-
 
 /*
 ░█▀▀░█▀█░█▀█░▀█▀
@@ -459,10 +458,7 @@ The tabs container
 /* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
 	--tab-min-height: 0;
-	margin-top: 6px !important;
-	margin-bottom: 6px !important;
-	margin-left: 20px !important;
-	margin-right: 20px !important;
+	margin: 6px 6px 5px 5px;
 }
 
 /* Hide solo tab */
@@ -686,7 +682,6 @@ Sidebar
 	padding: 6px !important;
 	border-radius: var(--bf-sidebar-searchbar-radius) !important;
 }
-
 
 /*
 ░█▀█░█▀▄░█▀▄░█▀█░█░█░█▀█░█▀█░█▀█░█▀▀░█░░
