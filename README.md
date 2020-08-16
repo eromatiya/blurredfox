@@ -82,12 +82,6 @@
 	+ Dark - Dark colorscheme. Good for the night.
 	+ Light - Bright colorscheme. Good for killing the eyes.
 
-### Uninstall
-
-1. Go to your profile directory.
-2. Delete the `chrome` folder.
-3. If you used the installation script or copied the `user.js` to your profile, delete it.
-
 ## User Support
 
 ### Some UIs are broken!
@@ -121,15 +115,24 @@
 1. You can adjust the value of `scrollbar-width` in `userContent.css`.
 2. Restart Firefox.
 
+### How can I set or change the colors for the Default color mode?
+
+1. The default mode are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors.
+
+
 ### I hate the colors! Why is everything transparent?!
 
 1. Use the [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) by editing the `userChrome.css`.
 2. You can change the colors yourself.
 3. The transparency is only applied to `Dark` and `Light` mode under the blurred color scheme. `No transparency == No blur`.
+4. You can read the next point.
 
-### How can I set or change the colors for the Default color mode?
+### Uninstall this now!
 
-1. The default mode are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors.
+1. Go to your profile directory.
+2. Delete the `chrome` folder.
+3. If you used the installation script or copied the `user.js` to your profile, delete it.
+4. Sayonara.
 
 ## Got a problem?
 
