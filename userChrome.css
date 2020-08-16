@@ -36,6 +36,7 @@
 
 /* Light Mode */
 :root:-moz-lwtheme-darktext {
+	--bf-main-window: transparent;
 	--bf-bg: #F2F2F266;
 	--bf-color: #0A0A0A;
 	
@@ -59,6 +60,7 @@
 
 /* Dark Mode */
 :root:-moz-lwtheme-brighttext {
+	--bf-main-window: transparent;
 	--bf-bg: #00000066;
 	--bf-color: #F2F2F2;
 	
@@ -95,7 +97,7 @@ Main window
 /* Add transparency to light and dark color schemes */
 #main-window:-moz-lwtheme-brighttext,
 #main-window:-moz-lwtheme-darktext {
-	background: transparent !important;
+	background: var(--bf-main-window) !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
