@@ -1,0 +1,87 @@
+/*
+░▀█▀░█▀█░█▀█░█░░░█▀▄░█▀█░█▀▄
+░░█░░█░█░█░█░█░░░█▀▄░█▀█░█▀▄
+░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀░░▀░▀░▀░▀
+
+Contains navbar, urlbar, and etc.
+*/
+
+.browser-toolbar {
+}
+
+.browser-toolbar:-moz-lwtheme-darktext,
+.browser-toolbar:-moz-lwtheme-brighttext {
+	background: var(--bf-tab-toolbar-bg) !important;
+}
+
+toolbar {
+	background-image: none !important;
+}
+
+toolbar#nav-bar {
+	padding: var(--bf-navbar-padding) !important;
+	
+	/* Remove horizontal line on navbar */
+	box-shadow: none !important;
+	border-top: none !important;
+}
+
+/* Set color schemes for #nav-bar */
+toolbar#nav-bar:-moz-lwtheme-darktext,
+toolbar#nav-bar:-moz-lwtheme-brighttext {
+	background: var(--bf-navbar-bg) !important;
+}
+
+toolbarbutton {
+	box-shadow: none !important;
+	margin-left: 2px !important;
+}
+
+.toolbarbutton-1 {
+}
+
+/* Set color schemes for #nav-bar */
+.toolbarbutton-1:-moz-lwtheme-darktext,
+.toolbarbutton-1:-moz-lwtheme-brighttext {
+	--toolbarbutton-hover-background: var(--bf-hover-bg) !important;
+	--toolbarbutton-active-background: var(--bf-active-bg) !important;
+}
+
+#searchbar {
+	border: none !important;
+}
+
+/* Set color scheme */
+#searchbar:-moz-lwtheme-darktext,
+#searchbar:-moz-lwtheme-brighttext {
+	background: var(--bf-bg) !important;
+}
+
+.searchbar-textbox {
+	font-weight: 700 !important;
+}
+
+#navigator-toolbox,
+toolbaritem {
+	border: none !important;
+}
+
+#navigator-toolbox::after {
+	border-bottom: 0 !important;
+}
+
+.toolbarbutton-text {
+}
+
+/* Set color scheme */
+.toolbarbutton-text:-moz-lwtheme-darktext,
+.toolbarbutton-text:-moz-lwtheme-brighttext {
+	color: var(--bf-icon-color)  !important;
+}
+
+/* Back button */
+#back-button > .toolbarbutton-icon {
+	--backbutton-background: transparent !important;
+	border: none !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
+}

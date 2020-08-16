@@ -1,0 +1,228 @@
+/*
+░█░█░█▀▄░█░░░█▀▄░█▀█░█▀▄
+░█░█░█▀▄░█░░░█▀▄░█▀█░█▀▄
+░▀▀▀░▀░▀░▀▀▀░▀▀░░▀░▀░▀░▀
+
+URL bar
+*/
+
+/* URL bar max-width and centered hack */
+#urlbar {
+	max-width: 70% !important;
+	margin: 0 15% !important;
+
+	/* URL bar and toolbar height */
+	--urlbar-height: 36px !important;
+	--urlbar-toolbar-height: 40px !important;
+}
+
+/* URL bar and toolbar height if compact mode */
+:root[uidensity="compact"] #urlbar {
+	--urlbar-height: 30px !important;
+	--urlbar-toolbar-height: 34px !important;
+}
+
+#urlbar-input:focus {
+}
+
+/* Set color scheme */
+#urlbar-input:focus:-moz-lwtheme-darktext,
+#urlbar-input:focus:-moz-lwtheme-brighttext {
+	color: var(--bf-urlbar-focused-color) !important;
+}
+
+#urlbar-background {
+	border-radius: var(--bf-urlbar-radius) !important;
+	border: none !important
+}
+
+/* Set color scheme */
+#urlbar-background:-moz-lwtheme-darktext,
+#urlbar-background:-moz-lwtheme-brighttext {
+	background: var(--bf-urlbar-bg) !important;
+}
+
+.urlbar-icon:not([disabled]):hover,
+.urlbar-icon-wrapper:not([disabled]):hover {
+}
+
+/* Set color scheme */
+.urlbar-icon:not([disabled]):hover:-moz-lwtheme-darktext,
+.urlbar-icon:not([disabled]):hover:-moz-lwtheme-brighttext,
+.urlbar-icon-wrapper:not([disabled]):hover:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper:not([disabled]):hover:-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
+
+.urlbar-icon[open],
+.urlbar-icon-wrapper[open],
+.urlbar-icon:not([disabled]):hover:active,
+.urlbar-icon-wrapper:hover:active {
+}
+
+/* Set color scheme */
+.urlbar-icon[open]:-moz-lwtheme-darktext,
+.urlbar-icon[open]:-moz-lwtheme-brighttext,
+.urlbar-icon-wrapper[open]:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper[open]:-moz-lwtheme-brighttext,
+.urlbar-icon:not([disabled]):hover:active:-moz-lwtheme-darktext,
+.urlbar-icon:not([disabled]):hover:active:-moz-lwtheme-brighttext,
+.urlbar-icon-wrapper:hover:active:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper:hover:active:-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
+
+.urlbar-icon-wrapper[open] > .urlbar-icon,
+.urlbar-icon-wrapper > .urlbar-icon:hover,
+.urlbar-icon-wrapper > .urlbar-icon:hover:active {
+}
+
+/* Set color scheme */
+.urlbar-icon-wrapper[open] > .urlbar-icon:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper[open] > .urlbar-icon:-moz-lwtheme-brighttext,
+.urlbar-icon-wrapper > .urlbar-icon:hover:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper > .urlbar-icon:hover:-moz-lwtheme-brighttext,
+.urlbar-icon-wrapper > .urlbar-icon:hover:active:-moz-lwtheme-darktext,
+.urlbar-icon-wrapper > .urlbar-icon:hover:active:-moz-lwtheme-brighttext{
+	background: var(--bf-hover-bg) !important;
+}
+
+#urlbar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
+	box-shadow: none !important;
+	display: none !important;
+	-moz-appearance: var(--bf-moz-appearance) !important;
+}
+
+#urlbar[open="true"] > #urlbar-background {
+}
+
+/* Set color scheme */
+#urlbar[open="true"] > #urlbar-background:-moz-lwtheme-darktext,
+#urlbar[open="true"] > #urlbar-background:-moz-lwtheme-brighttext {
+	background: var(--bf-urlbar-active-bg) !important;
+	backdrop-filter: blur(var(--bf-backdrop-blur)) !important;
+}
+
+.urlbar-icon {
+}
+
+/* Set color scheme */
+.urlbar-icon:-moz-lwtheme-darktext,
+.urlbar-icon:-moz-lwtheme-brighttext {
+	color: var(--bf-icon-color) !important;
+}
+
+.urlbar-icon > image {
+	fill: #ff00ff !important;
+	color: #ff00ff !important;
+}
+
+.urlbarView-favicon,
+.urlbarView-type-icon {
+	display: none !important;
+}
+
+.urlbarView-row[type="bookmark"] > span {
+	color: var(--bf-urlbar-bookmark-color) !important;
+}
+
+.urlbarView-row[type="switchtab"] > span .urlbarView-url {
+	color: var(--bf-urlbar-switch-tab-color) !important;
+}
+
+#urlbar-results {
+	font-weight: var(--bf-urlbar-results-font-weight);
+	font-size: var(--bf-urlbar-results-font-size) !important;
+}
+
+/* Hover background color */
+.urlbarView-row-inner:hover {
+	background: var(--bf-accent-bg) !important;
+}
+
+.urlbarView-url, .search-panel-one-offs-container {
+	font-weight: var(--bf-urlbar-results-font-weight);
+	font-size: var(--bf-urlbar-font-size) !important;
+}
+
+#urlbar-input {
+	font-size: var(--bf-urlbar-font-size) !important;
+	font-weight: var(--bf-urlbar-font-weight)!important;
+	text-align: center !important;
+}
+
+/* Urlbar buttons */
+.urlbar-icon,
+.urlbar-page-action {
+	border-radius: 6px;
+}
+
+/* URL bar hightlight color */
+::-moz-selection {
+	background-color: var(--bf-urlbar-hightlight-bg) !important;
+}
+
+/* Bookmark button - Star button */
+#star-button {
+	/* URL bar bookmark button */
+	display: block !important;
+}
+
+#star-button:hover:not(.no-hover):not([open=true]) {
+}
+
+/* Set color scheme */
+#star-button:hover:not(.no-hover):not([open=true]):-moz-lwtheme-darktext,
+#star-button:hover:not(.no-hover):not([open=true]):-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
+
+#star-button:hover:active:not(.no-hover),
+#star-button[open=true] {
+}
+
+/* Set color scheme */
+#star-button:hover:active:not(.no-hover):-moz-lwtheme-darktext,
+#star-button:hover:active:not(.no-hover):-moz-lwtheme-brighttext,
+#star-button[open=true]:-moz-lwtheme-darktext,
+#star-button[open=true]:-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
+
+/* Tracking */
+#tracking-protection-icon-container {
+	display: none !important;
+}
+
+/* Identity */
+#identity-box {
+	display: none !important;
+}
+
+#identity-box:hover:not(.no-hover):not([open=true]),
+#tracking-protection-icon-container:hover:not(.no-hover):not([open=true]) {
+}
+
+#identity-box:hover:not(.no-hover):not([open=true]):-moz-lwtheme-darktext,
+#identity-box:hover:not(.no-hover):not([open=true]):-moz-lwtheme-brighttext,
+#tracking-protection-icon-container:hover:not(.no-hover):not([open=true]):-moz-lwtheme-darktext,
+#tracking-protection-icon-container:hover:not(.no-hover):not([open=true]):-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
+
+#identity-box:hover:active:not(.no-hover),
+#identity-box[open=true],
+#tracking-protection-icon-container:hover:active:not(.no-hover),
+#tracking-protection-icon-container[open=true] {
+}
+
+#identity-box:hover:active:not(.no-hover):-moz-lwtheme-darktext,
+#identity-box:hover:active:not(.no-hover):-moz-lwtheme-brighttext,
+#identity-box[open=true]:-moz-lwtheme-darktext,
+#identity-box[open=true]:-moz-lwtheme-brighttext,
+#tracking-protection-icon-container:hover:active:not(.no-hover):-moz-lwtheme-darktext,
+#tracking-protection-icon-container:hover:active:not(.no-hover):-moz-lwtheme-brighttext,
+#tracking-protection-icon-container[open=true]:-moz-lwtheme-darktext,
+#tracking-protection-icon-container[open=true]:-moz-lwtheme-brighttext {
+	background: var(--bf-hover-bg) !important;
+}
