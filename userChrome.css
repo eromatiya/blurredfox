@@ -170,8 +170,8 @@ toolbarbutton {
 	margin: 0 15% !important;
 }
 
-/* URL bar and toolbar height if not compact mode */
-:root:not([uidensity="compact"]) #urlbar {
+/* URL bar and toolbar height */
+#urlbar {
 	--urlbar-height: 36px !important;
 	--urlbar-toolbar-height: 40px !important;
 }
@@ -436,10 +436,10 @@ The tabs container
 
 /* Move tab bar beneath the url bar */
 #titlebar {
+	/*
+	Set the value to 3 to move the tabbar below the navbar
+	*/
 	-moz-box-ordinal-group: 1 !important;
-	
-	/* 	Uncomment the line below to move tabbar below navbar */
-	/* 	-moz-box-ordinal-group: 3 !important; */
 }
 
 #titlebar::after {
@@ -459,7 +459,12 @@ The tabs container
 /* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
 	--tab-min-height: 0;
-	margin: 6px 6px 5px 5px;
+	margin: 6px 5px 6px 5px;
+}
+
+/* Compact mode */
+:root[uidensity="compact"] #tabbrowser-tabs {
+	margin: 0 !important;
 }
 
 /* Hide solo tab */
@@ -604,6 +609,10 @@ hbox.tab-content[pinned=true] .tab-text {
 	overflow: hidden;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
+}
+
+:root[uidensity="compact"] .tabbrowser-tab {
+	border-radius: 0 !important;
 }
 
 .tabbrowser-tab:hover {
