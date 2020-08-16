@@ -45,7 +45,11 @@ download_bf() {
 }
 
 function check_profile() {
-	FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" 
+	case "$OSTYPE" in #Different Paths in Windows compared to Linux
+  	msys*)    FF_USER_DIRECTORY="$(find "${HOME}AppData\Roaming\Mozilla\firefox" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" ;;
+  	*)        FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" ;;
+	esac
+	 
 }
 
 function print_args() {
