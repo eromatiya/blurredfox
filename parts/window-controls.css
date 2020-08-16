@@ -1,0 +1,28 @@
+
+
+/*
+░█░█░▀█▀░█▀█░█▀▄░█▀█░█░█░█▀▄░█░█░▀█▀░▀█▀░█▀█░█▀█░█▀▀
+░█▄█░░█░░█░█░█░█░█░█░█▄█░█▀▄░█░█░░█░░░█░░█░█░█░█░▀▀█
+░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀░▀▀▀
+ 
+The control buttons. Contains, close, minimize, and maximize buttons
+*/
+
+#autohide-context {
+	display: none !important;
+}
+
+#window-controls[hidden="true"] {
+	display: none !important;
+}
+
+#window-controls[hidden="false"] {
+	display: inline-flex !important;
+}
+
+/* Hide titlebar-buttonbox if there's single tab */
+/*
+:root[tabsintitlebar][sizemode="maximized"] #titlebar .titlebar-buttonbox-container {
+	display: none !important;
+}
+*/

@@ -1,0 +1,44 @@
+
+/* 
+░█▀▀░█▀█░█▀█░▀█▀░█▀▀░█░█░▀█▀░█▄█░█▀▀░█▀█░█░█
+░█░░░█░█░█░█░░█░░█▀▀░▄▀▄░░█░░█░█░█▀▀░█░█░█░█
+░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀░▀░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀
+ 
+Right-click menu
+*/
+
+menupopup,
+popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup {
+	border: 0 !important;
+	border-radius: 4px !important;
+	padding: 2px 0 2px 0  !important;
+}
+
+menupopup:-moz-lwtheme-darktext,
+menupopup:-moz-lwtheme-brighttext,
+popup:-moz-lwtheme-darktext,
+popup:-moz-lwtheme-brighttext,
+popup > menu > menupopup:-moz-lwtheme-darktext,
+popup > menu > menupopup:-moz-lwtheme-brighttext,
+menupopup > menu > menupopup:-moz-lwtheme-darktext,
+menupopup > menu > menupopup:-moz-lwtheme-brighttext {
+	-moz-appearance: none !important;
+	background: var(--bf-menupopup-bg) !important;
+	color: var(--bf-menupopup-color) !important;
+}
+
+menupopup menuseparator {
+/* 	-moz-appearance: none !important; */
+	margin: 2px 0 2px 0 !important;
+	padding: 0 !important;
+	border-top: none !important;
+	border-color: transparent !important;
+}
+
+menupopup menuseparator:-moz-lwtheme-darktext,
+menupopup menuseparator:-moz-lwtheme-brighttext {
+	-moz-appearance: none !important;
+  background: #525A6D  !important;
+}

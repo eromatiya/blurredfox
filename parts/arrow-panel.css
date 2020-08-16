@@ -1,0 +1,25 @@
+/*
+░█▀█░█▀▄░█▀▄░█▀█░█░█░█▀█░█▀█░█▀█░█▀▀░█░░
+░█▀█░█▀▄░█▀▄░█░█░█▄█░█▀▀░█▀█░█░█░█▀▀░█░░
+░▀░▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀░░░▀░▀░▀░▀░▀▀▀░▀▀▀
+ 
+The dropdown menus
+*/
+
+.panel-arrowcontent {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+toolbarseparator {
+	display: none !important;
+}
+
+box.panel-arrowbox {
+	display: none;
+}
+
+box.panel-arrowcontent {
+	border-radius: 8px !important;
+	border: none !important;
+}

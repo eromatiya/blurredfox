@@ -50,7 +50,8 @@ function check_profile() {
 	# Check OSTYPE
 	case "$OSTYPE" in
 		msys*)
-			FF_USER_DIRECTORY="$(find "${HOME}AppData\Roaming\Mozilla\firefox" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})"
+			# Untested on WSL
+			# FF_USER_DIRECTORY="$(find "${HOME}AppData\Roaming\Mozilla\firefox" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})"
 			;;
 		*)
 			FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})"

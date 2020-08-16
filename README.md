@@ -2,13 +2,19 @@
 
 ### A modern Firefox CSS Theme
 
-<p align="center"><img alt="Firefox with blurredfox" src="scrot.webp"/><br/><i>Firefox with blurredfox CSS theme</i></p>
+<p align="center"><img alt="Firefox with blurredfox" src="scrots/blurred.webp"/><br/><i>Firefox with blurredfox CSS theme</i></p>
+<p align="center"><img alt="Firefox with blurredfox" src="scrots/solid.webp"/><br/><i>blurredfox with solid colors</i></p>
 
 ## Requirements
 
 + The latest Firefox
-+ Compositor with blur shader (optional)
-+ Linux machine - untested on macOS and Windows 10 - might work though (optional)
++ Compositor with blur support (optional)
+
+## Notes
+
++ 100% working on linux.
++ Untested on macOS.
++ Transparency is broken on Windows 10 (has graphical glitches like flickering). Solid color scheme *may* work.
 
 ## How to
 
@@ -60,16 +66,17 @@
 	+ **`layout.css.backdrop-filter.enabled`**
 	+ **`svg.context-properties.content.enabled`**
 
-	Then make sure to **enable them all!**
+	Then make sure to **enable them all!**. Or just copy the `user.js` file to your profile.
 
 4. Go to your Firefox profile.
+
 	+ Linux - `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
 	+ Windows 10 - `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`.
 	+ macOS - `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX`.
 
 5. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
 6. Restart Firefox.
-7. Finally, you can now change whatever colorscheme you want in the Cusomization Window.
+7. Finally, you can now change whatever color mode you want in the Cusomization Window.
 
 	+ Default - Uses system colors, but uses the theme's layout.
 	+ Dark - Dark colorscheme. Good for the night.
@@ -79,7 +86,7 @@
 
 1. Go to your profile directory.
 2. Delete the `chrome` folder.
-3. If you used the installation script, you can also delete the `user.js` inside your profile directory.
+3. If you used the installation script or copied the `user.js` to your profile, delete it.
 
 ## Note
 
@@ -90,9 +97,10 @@
 
 ### If you're using Windows or macOS and something's wrong
 
-1. I only have Archlinux, so I cannot guarantee that it will work on Windows 10 and macOS without a problem. A feedback and a PR is absolutely welcome! All you can do or try is to install the theme, then change the value of `--bf-moz-appearance` variable to either `-moz-win-glass` if Windows 10 and `-moz-mac-vibrancy-dark` if macOS. Still, do not expect that it will work without a problem. The theme's untested on these platforms!
+1. I only have Archlinux, macOS' untested while the theme is broken on Windows 10.
+2. If the transparency is broken, use the solid color scheme. Edit the `userChrome.css` to switch.
 
-### Liar! Your theme's name is `blurredfox`, ***where is the blur***?!
+### Liar! The theme's name is `blurredfox`, ***where is the blur***?!
 
 1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can, however, have the blur effect by:
 
@@ -115,12 +123,13 @@
 
 ### I hate the colors! Why is everything transparent?!
 
-1. You can change the colors in `userChrome.css`.
-2. The transparency is only applied to `Dark` and `Light` colorschemes. `No transparency == No blur`.
+1. Use the solid color scheme by editing the `userChrome.css`.
+2. You can change the colors yourself.
+3. The transparency is only applied to `Dark` and `Light` mod under the blurred color scheme. `No transparency == No blur`.
 
-### How can I set or change the colors for the Default colorscheme?
+### How can I set or change the colors for the Default color mode?
 
-1. The default colorscheme are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors. So all you can do is to switch theme to change its colorscheme.
+1. The default mode are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors.
 
 ## Got a problem?
 
