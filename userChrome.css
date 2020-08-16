@@ -6,10 +6,10 @@
 Load preferred colorscheme
 */
 
-/* Blurred */
+/* Blurred Color Scheme */
 @import url('colors/blurred.css');
 
-/* Solid */
+/* Solid Color Scheme */
 /*
 @import url('colors/solid.css');
 */
@@ -19,7 +19,7 @@ Load preferred colorscheme
 ░█░█░░█░░░░█▀▀░█░░░█▀▀░█░█░█▀▀░█░█░░█░░▀▀█
 ░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░▀░░▀▀▀
 
-Firefox's UI Elements
+Load Customized Firefox's UI Elements
 */
 
 @import url('parts/main-window.css');

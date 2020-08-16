@@ -3,7 +3,7 @@
 ### A modern Firefox CSS Theme
 
 <p align="center"><img alt="Firefox with blurredfox" src="scrots/blurred.webp"/><br/><i>Firefox with blurredfox CSS theme</i></p>
-<p align="center"><img alt="Firefox with blurredfox" src="scrots/solid.webp"/><br/><i>blurredfox with solid colors</i></p>
+<p align="center"><img alt="Firefox with blurredfox" src="scrots/solid.webp"/><br/><i>blurredfox's layout with solid colors</i></p>
 
 ## Requirements
 
@@ -14,7 +14,7 @@
 
 + 100% working on linux.
 + Untested on macOS.
-+ Transparency is broken on Windows 10 (has graphical glitches like flickering). Solid color scheme *may* work.
++ Transparency is broken on Windows 10 (has graphical glitches like flickering). The [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) *may* work.
 
 ## How to
 
@@ -66,7 +66,7 @@
 	+ **`layout.css.backdrop-filter.enabled`**
 	+ **`svg.context-properties.content.enabled`**
 
-	Then make sure to **enable them all!**. Or just copy the `user.js` file to your profile.
+	Then make sure to **enable them all!**. Or you can just copy the `user.js` file to your profile.
 
 4. Go to your Firefox profile.
 
@@ -88,17 +88,17 @@
 2. Delete the `chrome` folder.
 3. If you used the installation script or copied the `user.js` to your profile, delete it.
 
-## Note
+## User Support
 
-### Some UI are broken!
+### Some UIs are broken!
 
 1. Check if you're using the latest version of Firefox.
-2. If you're not using Linux check the next note below.
+2. It's broken because you're using Windows 10 and macOS or you're using an ancient version of Firefox.
 
 ### If you're using Windows or macOS and something's wrong
 
 1. I only have Archlinux, macOS' untested while the theme is broken on Windows 10.
-2. If the transparency is broken, use the solid color scheme. Edit the `userChrome.css` to switch.
+2. If the transparency is broken, use the [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css). Edit the `userChrome.css` to switch.
 
 ### Liar! The theme's name is `blurredfox`, ***where is the blur***?!
 
@@ -123,9 +123,9 @@
 
 ### I hate the colors! Why is everything transparent?!
 
-1. Use the solid color scheme by editing the `userChrome.css`.
+1. Use the [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) by editing the `userChrome.css`.
 2. You can change the colors yourself.
-3. The transparency is only applied to `Dark` and `Light` mod under the blurred color scheme. `No transparency == No blur`.
+3. The transparency is only applied to `Dark` and `Light` mode under the blurred color scheme. `No transparency == No blur`.
 
 ### How can I set or change the colors for the Default color mode?
 
