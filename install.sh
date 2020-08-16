@@ -14,7 +14,8 @@ download_bf() {
 
 	curl -LJ0 https://github.com/manilarome/blurredfox/archive/master.tar.gz | tar -xz -C /tmp/
 
-	if [[ $? -eq 0 ]]; 
+	# Download success!
+	if [[ $? -eq 0 ]];
 	then
 		message "[>>] Copying..."
 
@@ -29,11 +30,12 @@ download_bf() {
 			rm -rf "/tmp/blurredfox-master"
 		else
 			message " [!!] There was a problem while copying the files. Terminating..."
-			return 1
+			exit
 		fi
 	else
+		# Download failed
 		message " [!!] Problem detected while downloading the theme. Terminating..."
-		return 1
+		exit
 	fi
 	echo "░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█▀▄"
 	echo "░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█░█"
@@ -48,7 +50,7 @@ function check_profile() {
 	FF_USER_DIRECTORY="$(find "${HOME}/.mozilla/firefox/" -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.'${1})" 
 }
 
-function print_args() {
+function print_help() {
 	echo "Usage:"
 	echo ""
 	echo "help	- Show this message"
@@ -67,7 +69,7 @@ function print_args() {
 }
 
 # Check args
-if [[ ! -z "${@}" ]] && [[ ! -z "${1}" ]] ;
+if [[ ! -z "${@}" ]] && [[ ! -z "${1}" ]];
 then
 
 	if [[ "${1}" == "dev" ]];
@@ -92,11 +94,11 @@ then
 		check_profile "default-esr"
 	elif [[ "${1}" == "help" ]];
 	then
-		print_args
+		print_help
 		exit
 	else
 		echo -ne "Invalid parameter!\n"
-		print_args
+		print_help
 		exit
 	fi
 else
@@ -105,20 +107,20 @@ else
 	check_profile "default-release"
 fi
 
-if [[ -n $FF_USER_DIRECTORY ]];
+if [[ -n "$FF_USER_DIRECTORY" ]];
 then
 	message "[>>] Firefox user profile directory located..."
 	CHROME_DIRECTORY="$(find "$FF_USER_DIRECTORY/" -maxdepth 1 -type d -name 'chrome')"
 	if [[ -n "$CHROME_DIRECTORY" ]];
 	then
-		# Check if the chrome folder contains files
+		# Check if the chrome folder is not empty
 		shopt -s nullglob dotglob 
 		content="${CHROME_DIRECTORY}/"
 
 		# If there's a current theme, make a backup
 		if [ ${#content[@]} -gt 0 ];
 		then
-			message "[>>] Current chrome folder is not empty. Creating a backup in the same directory..."
+			message "[>>] Existing chrome folder detected! Creating a backup..."
 			
 			backup_dir="${CHROME_DIRECTORY}-backup"
 
@@ -131,9 +133,10 @@ then
 			mv --backup=t "${CHROME_DIRECTORY}" "${CHROME_DIRECTORY}-backup"
 			mkdir "${CHROME_DIRECTORY}"
 		fi
+		# Download theme
 		download_bf
 	else
-		message "[>>] Chrome directory does not exist! Creating one..."
+		message "[>>] Chrome folder does not exist! Creating one..."
 		mkdir "${FF_USER_DIRECTORY}/chrome"
 
 		# Check if backup folder exist
@@ -141,6 +144,7 @@ then
 		then
 			CHROME_DIRECTORY="${FF_USER_DIRECTORY}/chrome"
 			
+			# Download theme
 			download_bf
 		else
 			message "[!!] There was a problem creating the directory. Terminating..."
