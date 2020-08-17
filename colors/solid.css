@@ -36,7 +36,7 @@
 
 /* Light Mode */
 :root:-moz-lwtheme-darktext {
-	--bf-main-window: #F2F2F2;
+	--bf-main-window: #FFFFFF;
 	--bf-bg: var(--bf-main-window);
 	--bf-color: #0A0A0A;
 	
@@ -44,11 +44,11 @@
 	--bf-active-bg: #1A1A1A66;
 	
 	--bf-icon-color: #0A0A0A;
-	--bf-tab-toolbar-bg: #F2F2F2;
-	--bf-tab-selected-bg: #CFCFCF;
-	--bf-navbar-bg: #E6E6E6;
-	--bf-urlbar-bg: var(--bf-bg);
-	--bf-urlbar-active-bg: var(--bf-bg);
+	--bf-tab-toolbar-bg: #E5E5E5;
+	--bf-tab-selected-bg: var(--bf-bg);
+	--bf-navbar-bg: var(--bf-bg);
+	--bf-urlbar-bg: #E6E6E6;
+	--bf-urlbar-active-bg: #E6E6E6;
 	--bf-urlbar-focused-color: var(--bf-color);
 	
 	--bf-sidebar-bg: var(--bf-bg);
@@ -70,9 +70,9 @@
 	--bf-icon-color: #F2F2F2;
 	--bf-tab-toolbar-bg: var(--base-bg);
 	--bf-tab-selected-bg: #252525;
-	--bf-navbar-bg: #252525;
-	--bf-urlbar-bg: #353535;
-	--bf-urlbar-active-bg: #353535;
+	--bf-navbar-bg: #202020;
+	--bf-urlbar-bg: #2F2F2F;
+	--bf-urlbar-active-bg: #2F2F2F;
 	--bf-urlbar-focused-color: var(--bf-color);
 	
 	--bf-sidebar-bg: var(--bf-bg);
