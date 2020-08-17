@@ -164,8 +164,6 @@ URL bar
 
 /* Bookmark button - Star button */
 #star-button {
-	/* URL bar bookmark button */
-	display: block !important;
 }
 
 #star-button:hover:not(.no-hover):not([open=true]) {
@@ -191,12 +189,14 @@ URL bar
 
 /* Tracking */
 #tracking-protection-icon-container {
-	display: none !important;
+	border-radius: 6px;
+	margin: 2px;
 }
 
 /* Identity */
 #identity-box {
-	display: none !important;
+	border-radius: 6px;
+	margin: 2px;
 }
 
 #identity-box:hover:not(.no-hover):not([open=true]),
