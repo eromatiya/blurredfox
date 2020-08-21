@@ -15,6 +15,7 @@
 + 100% working on linux.
 + Untested on macOS.
 + Transparency is broken on Windows 10 (has graphical glitches like flickering). The [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) *may* work.
++ No, the vertical titlebar is not included. Switch to Linux, then use AwesomeWM to achieve this gloriousness.
 
 ## How to
 
