@@ -23,14 +23,22 @@ download_bf() {
 		cp -r "${FF_THEME}"* "${CHROME_DIRECTORY}"
 
 		# Backup user.js instead of overwriting it
-		if [ -e "${CHROME_DIRECTORY}/user.js" ]
+		if [ -e "${CHROME_DIRECTORY}/../user.js" ]
 		then
-			message "[>>] Backing up user.js to user.js.bak..."
-			cp "${CHROME_DIRECTORY}/user.js" "${CHROME_DIRECTORY}/user.js.bak"
+			message "[>>] Existing user.js detected! Creating backup to user-prefs-backup/..."
+			user_pref_backup_dir="${CHROME_DIRECTORY}/../user-prefs-backup"
+
+			if [[ ! -d "$user_pref_backup_dir" ]];
+			then
+				message "[>>] user-prefs-backup/ folder does not exist! Creating..."
+				mkdir "${CHROME_DIRECTORY}/../user-prefs-backup"
+			fi
+
+			mv --backup=t "${CHROME_DIRECTORY}/../user.js" "${CHROME_DIRECTORY}/../user-prefs-backup/"
 		fi
 
 		# Move user.js to the main profile directory
-		mv "${CHROME_DIRECTORY}/user.js" "../"
+		mv "${CHROME_DIRECTORY}/user.js" "${CHROME_DIRECTORY}/../"
 
 		if [[ $? -eq 0 ]];
 		then
@@ -41,7 +49,7 @@ download_bf() {
 		fi
 	else
 		# Download failed
-		message " [!!] Problem detected while downloading the theme. Terminating..."
+		message " [!!] There was a problem while downloading the theme. Terminating..."
 		exit
 	fi
 	echo "░█▀▄░█░░░█░█░█▀▄░█▀▄░█▀▀░█▀▄"
