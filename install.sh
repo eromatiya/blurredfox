@@ -22,6 +22,13 @@ download_bf() {
 		FF_THEME="/tmp/blurredfox-master/"
 		cp -r "${FF_THEME}"* "${CHROME_DIRECTORY}"
 
+		# Backup user.js instead of overwriting it
+		if [ -e "${CHROME_DIRECTORY}/user.js" ]
+		then
+			message "[>>] Backing up user.js to user.js.bak..."
+			cp "${CHROME_DIRECTORY}/user.js" "${CHROME_DIRECTORY}/user.js.bak"
+		fi
+
 		# Move user.js to the main profile directory
 		mv "${CHROME_DIRECTORY}/user.js" "../"
 
