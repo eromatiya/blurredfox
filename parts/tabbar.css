@@ -30,7 +30,7 @@ The tabs container
 
 /* 	Set minimum height for tab bar */
 #tabbrowser-tabs {
-	--tab-min-height: 0;
+	/* --tab-min-height: 0; */
 	margin: 6px 5px 6px 5px;
 }
 
