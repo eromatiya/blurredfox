@@ -28,8 +28,8 @@
 + It is advisible to check the script first before running it.
 + You need `bash` to run it.
 + If you have an existing chrome folder, the script will make a backup of it in your profile directory.
++ The script will move a file named `user.js` that contains all the preferences needed for blurredfox to work. The existing one will be backed up.
 + If the installation script is not working, feel free to submit an issue or a pull request.
-+ The script will move a file named `user.js` that contains all the preferences needed for blurredfox to work. The existing one will be copied to `user.js.bak`.
 
 1. Run the script below. If you are using a different build like nightly, beta, etc., make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will default to stable.
 
