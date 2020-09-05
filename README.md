@@ -111,11 +111,6 @@
 3. Go to `System Settings > KWin Scripts > Enable Force Blur`.
 4. Change its settings. If there's no settings/settings icon, Logout. Re-login.
 
-### Where is the scrollbar?
-
-1. You can adjust the value of `scrollbar-width` in `userContent.css`.
-2. Restart Firefox.
-
 ### How can I set or change the colors for the Default color mode?
 
 1. The default mode are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors.

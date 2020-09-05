@@ -8,14 +8,16 @@
 	}
 }
 
-/* Hide scrollbar */
-:root{
-	scrollbar-width: none !important;
+/* Sets up minimal scrollbar */
+:root {
+	scrollbar-width: thin !important;
+	scrollbar-color: rgb(161, 161, 161) transparent !important;
 }
 
-/* Hide incognito scrollbar */
+/*  Sets up minimal incognito scrollbar */
 @-moz-document url(about:privatebrowsing) {
 	:root{
-		scrollbar-width: none !important;
+		scrollbar-width: thin !important;
+		scrollbar-color: rgb(161, 161, 161) transparent !important;
 	}
-} 
+}
