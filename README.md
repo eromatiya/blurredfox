@@ -100,7 +100,7 @@
 1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can, however, have the blur effect by:
 
 	+ Making sure you have a compositor and it supports blur.
-	+ If you're not using GNOME or KDE Plasma that has its own compositors, use tryone144's [feature/dual_kawase](https://github.com/tryone144/picom/tree/feature/dual_kawase) branch of picom. It includes the dual kawase shader.
+	+ If you're not using GNOME or KDE Plasma that has its own compositors, use [picom](https://github.com/yshui/picom). It includes the dual kawase blur shader.
 	+ GNOME's compositor, mutter, doesn't support blur. Hey, GNOME devs, it's already 2020. Just kidding!
 	+ If you're using KDE Plasma, read the next note below.
 
