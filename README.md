@@ -70,6 +70,8 @@
 	Then make sure to **enable them all!**. Or you can just copy the `user.js` file to your profile.
 
 4. Go to your Firefox profile.
+   - Go to about:profiles and Click on Open folder next to Root Directory
+   - Go to the File directory: 
 
 	+ Linux - `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
 	+ Windows 10 - `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`.
