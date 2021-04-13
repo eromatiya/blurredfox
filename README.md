@@ -77,7 +77,7 @@
 
 5. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
 6. Restart Firefox.
-7. Finally, you can now change whatever color mode you want in the Cusomization Window.
+7. Finally, you can now change whatever color mode you want in the Customization Window.
 
 	+ Default - Uses system colors, but uses the theme's layout.
 	+ Dark - Dark colorscheme. Good for the night.
