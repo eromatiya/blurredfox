@@ -7,15 +7,15 @@
 
 ## Requirements
 
-+ The latest Firefox
-+ Compositor with blur support (optional)
+- The latest Firefox
+- Compositor with blur support (optional)
 
 ## Notes
 
-+ 100% working on linux.
-+ Untested on macOS.
-+ Transparency is broken on Windows 10 (has graphical glitches like flickering). The [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) *may* work.
-+ No, the vertical titlebar is not included. Switch to Linux, then use AwesomeWM to achieve this gloriousness.
+- 100% working on linux.
+- Untested on macOS.
+- Transparency is broken on Windows 10 (has graphical glitches like flickering). The [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) _may_ work.
+- No, the vertical titlebar is not included. Switch to Linux, then use AwesomeWM to achieve this gloriousness.
 
 ## How to
 
@@ -23,34 +23,34 @@
 
 #### Notes before running the script:
 
-+ If you have a multiple firefox builds, the script will still run without a problem. Just make sure to pass your target firefox build.
-+ If you or your firefox build have a multiple profile, the script will return an error! Make sure you only have one!
-+ It is advisible to check the script first before running it.
-+ You need `bash` to run it.
-+ If you have an existing chrome folder, the script will make a backup of it in your profile directory.
-+ The script will move a file named `user.js` that contains all the preferences needed for blurredfox to work. The existing one will be backed up.
-+ If the installation script is not working, feel free to submit an issue or a pull request.
+- If you have a multiple firefox builds, the script will still run without a problem. Just make sure to pass your target firefox build.
+- If you or your firefox build have a multiple profile, the script will return an error! Make sure you only have one!
+- It is advisible to check the script first before running it.
+- You need `bash` to run it.
+- If you have an existing chrome folder, the script will make a backup of it in your profile directory.
+- The script will move a file named `user.js` that contains all the preferences needed for blurredfox to work. The existing one will be backed up.
+- If the installation script is not working, feel free to submit an issue or a pull request.
 
 1. Run the script below. If you are using a different build like nightly, beta, etc., make sure to replace the 'stable' with the Firefox Build you are using. If leave empty, it will default to stable.
 
-	```
-	# Available parameters:
-	# stable - Firefox Stable Build
-	# dev - Firefox Developer Edition
-	# beta - Firefox Beta
-	# nightly - Firefox Nightly
-	# esr - Firefox Extended Support Release
+   ```
+   # Available parameters:
+   # stable - Firefox Stable Build
+   # dev - Firefox Developer Edition
+   # beta - Firefox Beta
+   # nightly - Firefox Nightly
+   # esr - Firefox Extended Support Release
 
-	# Examples:
+   # Examples:
 
-	# Stable build's profile
-  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
-  	bash -s -- stable
+   # Stable build's profile
+   $ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
+   bash -s -- stable
 
-  	# Nightly build's profile
-  	$ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
-  	bash -s -- nightly
-  	```
+   # Nightly build's profile
+   $ curl -fsSL https://raw.githubusercontent.com/manilarome/blurredfox/script/install.sh |
+   bash -s -- nightly
+   ```
 
 2. After the confirmation message that the theme is successfully installed, open firefox. Change the colorscheme by **`Open Menu > Customize > Change colorscheme`**.
 
@@ -60,28 +60,28 @@
 2. A dialog will warn you, but ignore it, ~~just do it~~ press the `I accept the risk!` button.
 3. Search for these:
 
-	+ **`toolkit.legacyUserProfileCustomizations.stylesheets`**
-	+ **`layers.acceleration.force-enabled`**
-	+ **`gfx.webrender.all`**
-	+ **`gfx.webrender.enabled`**
-	+ **`layout.css.backdrop-filter.enabled`**
-	+ **`svg.context-properties.content.enabled`**
+   - **`toolkit.legacyUserProfileCustomizations.stylesheets`**
+   - **`layers.acceleration.force-enabled`**
+   - **`gfx.webrender.all`**
+   - **`gfx.webrender.enabled`**
+   - **`layout.css.backdrop-filter.enabled`**
+   - **`svg.context-properties.content.enabled`**
 
-	Then make sure to **enable them all!**. Or you can just copy the `user.js` file to your profile.
+   Then make sure to **enable them all!**. Or you can just copy the `user.js` file to your profile.
 
 4. Go to your Firefox profile.
 
-	+ Linux - `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
-	+ Windows 10 - `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`.
-	+ macOS - `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX`.
+   - Linux - `$HOME/.mozilla/firefox/XXXXXXX.default-XXXXXX/`.
+   - Windows 10 - `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`.
+   - macOS - `Users/<USERNAME>/Library/Application Support/Firefox/Profiles/XXXXXXX.default-XXXXXXX`.
 
 5. Create a folder and name it **`chrome`**, then assuming that you already have cloned this repo, just copy the theme to `chrome` folder.
 6. Restart Firefox.
 7. Finally, you can now change whatever color mode you want in the Cusomization Window.
 
-	+ Default - Uses system colors, but uses the theme's layout.
-	+ Dark - Dark colorscheme. Good for the night.
-	+ Light - Bright colorscheme. Good for killing the eyes.
+   - Default - Uses system colors, but uses the theme's layout.
+   - Dark - Dark colorscheme. Good for the night.
+   - Light - Bright colorscheme. Good for killing the eyes.
 
 ## User Support
 
@@ -95,14 +95,14 @@
 1. I only have Archlinux, macOS' untested while the theme is broken on Windows 10.
 2. If the transparency is broken, use the [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css). Edit the `userChrome.css` to switch.
 
-### Liar! The theme's name is `blurredfox`, ***where is the blur***?!
+### Liar! The theme's name is `blurredfox`, **_where is the blur_**?!
 
 1. Yeah, the name `blurredfox` is a lie, just like the cake. I named it blurredfox because it's designed to look gorgeous with a blur effect. You can, however, have the blur effect by:
 
-	+ Making sure you have a compositor and it supports blur.
-	+ If you're not using GNOME or KDE Plasma that has its own compositors, use [picom](https://github.com/yshui/picom). It includes the dual kawase blur shader.
-	+ GNOME's compositor, mutter, doesn't support blur. Hey, GNOME devs, it's already 2020. Just kidding!
-	+ If you're using KDE Plasma, read the next note below.
+   - Making sure you have a compositor and it supports blur.
+   - If you're not using GNOME or KDE Plasma that has its own compositors, use [picom](https://github.com/yshui/picom). It includes the dual kawase blur shader.
+   - GNOME's compositor, mutter, doesn't support blur. Hey, GNOME devs, it's already 2020. Just kidding!
+   - If you're using KDE Plasma, read the next note below.
 
 ### I'm using KDE Plasma, but there's no blur! How many other lies have I been told by the council?
 
@@ -115,13 +115,24 @@
 
 1. The default mode are from Firefox and it uses the system colors. Although I only tried and tested it with `GTK3`, it should work with any platforms or environment as long as Firefox can detect your system colors.
 
-
 ### I hate the colors! Why is everything transparent?!
 
 1. Use the [solid color scheme](https://github.com/manilarome/blurredfox/blob/master/colors/solid.css) by editing the `userChrome.css`.
 2. You can change the colors yourself.
 3. The transparency is only applied to `Dark` and `Light` mode under the blurred color scheme. `No transparency == No blur`.
 4. You can read the next point.
+
+### I don't like the caption buttons!
+
+1. Go to your $FIREFOX_PROFILE/chrome folder.
+2. Open the `userChrome.css` file
+3. Comment `@import url("parts/content-menu.css");`
+
+#### I like the caption buttons, but don't like the colors!
+
+1. Go to your $FIREFOX_PROFILE/chrome/parts folder.
+2. Open the `content-menu.css` file.
+3. Change the colors in the root section.
 
 ### Uninstall this now!
 

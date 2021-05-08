@@ -7,7 +7,7 @@ Load preferred colorscheme
 */
 
 /* Blurred Color Scheme */
-@import url('colors/blurred.css');
+@import url("colors/solid.css");
 
 /* Solid Color Scheme */
 /*
@@ -22,13 +22,14 @@ Load preferred colorscheme
 Load Customized Firefox's UI Elements
 */
 
-@import url('parts/main-window.css');
-@import url('parts/toolbar.css');
-@import url('parts/tabbar.css');
-@import url('parts/urlbar.css');
-@import url('parts/sidebar.css');
-@import url('parts/arrow-panel.css');
-@import url('parts/findbar.css');
-@import url('parts/context-menu.css');
-@import url('parts/customization-window.css');
-@import url('parts/window-controls.css');
+@import url("parts/main-window.css");
+@import url("parts/toolbar.css");
+@import url("parts/tabbar.css");
+@import url("parts/urlbar.css");
+@import url("parts/sidebar.css");
+@import url("parts/arrow-panel.css");
+@import url("parts/findbar.css");
+@import url("parts/content-menu.css");
+@import url("parts/context-menu.css");
+@import url("parts/customization-window.css");
+@import url("parts/window-controls.css");

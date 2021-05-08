@@ -1,0 +1,55 @@
+/*
+
+█▀▀ █▀█ █▄░█ ▀█▀ █▀▀ █▄░█ ▀█▀   █▀▄▀█ █▀▀ █▄░█ █░█
+█▄▄ █▄█ █░▀█ ░█░ ██▄ █░▀█ ░█░   █░▀░█ ██▄ █░▀█ █▄█
+ 
+The findbar
+*/
+
+/* Mac color theme */
+:root {
+  --caption-min-color: rgba(36, 209, 49, 1);
+  --caption-max-color: rgba(252, 185, 15, 1);
+  --caption-close-color: rgba(250, 55, 55, 1);
+}
+
+/* Dark color theme 
+:root {
+	--caption-min-color: rgba(82, 82, 82);
+	--caption-max-color: rgba(100, 100, 100);
+	--caption-close-color: rgba(126, 126, 126);
+}
+*/
+
+.titlebar-buttonbox {
+  position: relative;
+}
+
+.titlebar-button {
+  transition: all 0.3s ease !important;
+  padding: 8px 10px !important;
+  background: var(--dark-color) !important;
+}
+
+.titlebar-button.titlebar-close {
+  padding-right: 26px !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
+  transition: all 0.3s ease !important;
+  list-style-image: none;
+  border-radius: 10px;
+}
+
+.titlebar-button.titlebar-min > .toolbarbutton-icon {
+  background: var(--caption-min-color) !important;
+}
+
+.titlebar-button.titlebar-max > .toolbarbutton-icon,
+.titlebar-button.titlebar-restore > .toolbarbutton-icon {
+  background: var(--caption-max-color) !important;
+}
+
+.titlebar-button.titlebar-close > .toolbarbutton-icon {
+  background: var(--caption-close-color) !important;
+}
