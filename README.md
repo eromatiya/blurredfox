@@ -126,7 +126,7 @@
 
 1. Go to your $FIREFOX_PROFILE/chrome folder.
 2. Open the `userChrome.css` file
-3. Uncomment `@import url("parts/content-menu.css");`
+3. Comment `@import url("parts/content-menu.css");`
 
 #### I like the caption buttons, but don't like the colors!
 
