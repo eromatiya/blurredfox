@@ -89,7 +89,7 @@ URL bar
 
 #urlbar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
 	box-shadow: none !important;
-	display: none !important;
+	display: var(--bf-urlbar-display) !important;
 	-moz-appearance: var(--bf-moz-appearance) !important;
 }
 
