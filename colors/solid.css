@@ -20,7 +20,8 @@
 	--bf-urlbar-font-weight: 500;
 	--bf-urlbar-switch-tab-color: #6498EF;
 	--bf-urlbar-bookmark-color: #53E2AE;
-	
+	--bf-urlbar-display: none;
+
 	--bf-navbar-padding: 6px;
 	
 	--bf-tab-selected-bg: #77777788;
